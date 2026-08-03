@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/DripSharp.SqlTrellis/DripSharp.SqlTrellis.csproj" />
+  <Project Path="tests/DripSharp.SqlTrellis.Tests/DripSharp.SqlTrellis.Tests.csproj" />
+</Solution>

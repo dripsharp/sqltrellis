@@ -1,0 +1,8 @@
+JSqlParser 5.3
+
+This repository contains an independent mechanical .NET translation of JSqlParser. It is not affiliated with or endorsed by the upstream project.
+
+The translated upstream source is provided under the Apache-2.0 license selected by this target. See LICENSE for the complete license text.
+
+Upstream source revision: 8a9479a05c75fcb73d0ed167a822b9b18ab7abaa
+Upstream repository: https://github.com/JSQLParser/JSqlParser.git
