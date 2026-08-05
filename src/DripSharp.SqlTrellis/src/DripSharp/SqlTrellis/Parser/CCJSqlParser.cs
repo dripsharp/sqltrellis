@@ -15384,7 +15384,7 @@ default:
 this.jj_la1[211] = this.jj_gen;
 break;
 }
-return new global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>(expressionList, alias!);
+return new global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>(global::DripSharp.SqlTrellis.SqlTrellisGenericCompatibility.CastExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>(expressionList), alias!);
 }
 
 public global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>> PivotMultiInItems() {
@@ -28760,7 +28760,7 @@ global::DripSharp.SqlTrellis.Parser.Token tk2 = default!;
 string schema;
 string type = "";
 global::System.Collections.Generic.IList<string> argumentsStringList = new global::System.Collections.Generic.List<string>();
-global::System.Collections.Generic.IList<int> array = new global::System.Collections.Generic.List<int>();
+global::System.Collections.Generic.IList<int?> array = global::DripSharp.Runtime.JavaCompat.CastList<int?>(new global::System.Collections.Generic.List<int>());
 global::System.Collections.Generic.IList<string> name;
 global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType arrayType;
 int precision = -1;
@@ -28987,7 +28987,7 @@ default:
 this.jj_la1[475] = this.jj_gen;
 break;
 }
-global::DripSharp.Runtime.JavaCompat.Add(array, global::DripSharp.Runtime.JavaCompat.Unbox(((tk! != default!) ? global::DripSharp.Runtime.JavaCompat.ParseInt(tk!.image, 10) : (int)(default!))));
+global::DripSharp.Runtime.JavaCompat.Add(array, ((tk! != default!) ? (int?)(global::DripSharp.Runtime.JavaCompat.ParseInt(tk!.image, 10)) : (int?)(default!)));
 this.jj_consume_token(523);
 if (this.jj_2_431(2)) {} else {
 goto __java_break_1;

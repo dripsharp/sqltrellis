@@ -88,10 +88,10 @@ merge.setInsertFirst(insertFirst);
 global::DripSharp.Testing.JavaAssertJ.That(merge.getOperations()).IsEqualTo(expectedOperations);
 }
 
-private static global::DripSharp.Runtime.JavaStream<object> deriveOperationsFromStandardClausesCases() {
+private static global::DripSharp.Runtime.JavaStream<object[]> deriveOperationsFromStandardClausesCases() {
 global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate update = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate>();
 global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert insert = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert>();
-return global::DripSharp.Runtime.JavaCompat.Stream<object>(global::DripSharp.Runtime.JavaCompat.StreamOf<object>(new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update, insert), update, insert, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert, update), update, insert, true }));
+return global::DripSharp.Runtime.JavaCompat.Stream<object[]>(global::DripSharp.Runtime.JavaCompat.StreamOf<object[]>(new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update, insert), update, insert, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert, update), update, insert, true }));
 }
 
 internal virtual void testDeriveStandardClausesFromOperations(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Merge.MergeOperation> operations, global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate expectedUpdate, global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert expectedInsert, bool expectedInsertFirst) {
@@ -102,13 +102,13 @@ global::DripSharp.Testing.JavaAssertJ.That(merge.getMergeInsert()).IsEqualTo(exp
 global::DripSharp.Testing.JavaAssertJ.That(merge.isInsertFirst()).IsEqualTo(expectedInsertFirst);
 }
 
-private static global::DripSharp.Runtime.JavaStream<object> deriveStandardClausesFromOperationsCases() {
+private static global::DripSharp.Runtime.JavaStream<object[]> deriveStandardClausesFromOperationsCases() {
 global::DripSharp.SqlTrellis.Statement.Merge.MergeDelete delete1 = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeDelete>();
 global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate update1 = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate>();
 global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate update2 = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate>();
 global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert insert1 = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert>();
 global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert insert2 = global::DripSharp.Testing.JavaMockito.Mock<global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert>();
-return global::DripSharp.Runtime.JavaCompat.Stream<object>(global::DripSharp.Runtime.JavaCompat.StreamOf<object>(new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update1, insert1), update1, insert1, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert1, update1), update1, insert1, true }, new object[] { global::DripSharp.Runtime.JavaCompat.ListOf<global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate>(update1), update1, (object[])default!, false }, new object[] { global::DripSharp.Runtime.JavaCompat.ListOf<global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert>(insert1), (object[])default!, insert1, true }, new object[] { global::System.Array.Empty<object>(), (object[])default!, (object[])default!, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update1, update2, delete1, insert1, insert2), update1, insert1, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert1, insert2, update1, update2, delete1), update1, insert1, true }));
+return global::DripSharp.Runtime.JavaCompat.Stream<object[]>(global::DripSharp.Runtime.JavaCompat.StreamOf<object[]>(new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update1, insert1), update1, insert1, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert1, update1), update1, insert1, true }, new object[] { global::DripSharp.Runtime.JavaCompat.ListOf<global::DripSharp.SqlTrellis.Statement.Merge.MergeUpdate>(update1), update1, (object[])default!, false }, new object[] { global::DripSharp.Runtime.JavaCompat.ListOf<global::DripSharp.SqlTrellis.Statement.Merge.MergeInsert>(insert1), (object[])default!, insert1, true }, new object[] { global::System.Array.Empty<object>(), (object[])default!, (object[])default!, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(update1, update2, delete1, insert1, insert2), update1, insert1, false }, new object[] { global::DripSharp.Runtime.JavaCompat.AsList<object>(insert1, insert2, update1, update2, delete1), update1, insert1, true }));
 }
 
 public static global::System.Collections.Generic.IEnumerable<object[]> __Data_7aa11077aaaf3e45()

@@ -52,7 +52,7 @@ this.__capture_0 = __capture_0;
 
 protected internal override object visitBinaryExpression<J>(global::DripSharp.SqlTrellis.Expression.BinaryExpression expr, J context) {
 if (!((expr is global::DripSharp.SqlTrellis.Expression.Operators.Conditional.AndExpression))) {
-this.__capture_0.Push(new global::DripSharp.SqlTrellis.Statement.AdaptersTest.Pair<string, string>((object)default!, (object)default!));
+this.__capture_0.Push(new global::DripSharp.SqlTrellis.Statement.AdaptersTest.Pair<string, string>((string)default!, (string)default!));
 }
 return base.visitBinaryExpression<J>(expr, context);
 }

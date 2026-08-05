@@ -15,7 +15,7 @@ private global::System.Collections.Generic.IList<string> argumentsStringList = n
 
 private string characterSet = null!;
 
-private global::System.Collections.Generic.IList<int> arrayData = new global::System.Collections.Generic.List<int>();
+private global::System.Collections.Generic.IList<int?> arrayData = global::DripSharp.Runtime.JavaCompat.CastList<int?>(new global::System.Collections.Generic.List<int>());
 
 public ColDataType() {}
 
@@ -62,17 +62,17 @@ public virtual void setCharacterSet(string characterSet) {
 this.characterSet = characterSet;
 }
 
-public virtual global::System.Collections.Generic.IList<int> getArrayData() {
-return this.arrayData;
+public virtual global::System.Collections.Generic.IList<int?> getArrayData() {
+return global::DripSharp.Runtime.JavaCompat.CastList<int?>(this.arrayData);
 }
 
-public virtual void setArrayData(global::System.Collections.Generic.IList<int> arrayData) {
-this.arrayData = arrayData;
+public virtual void setArrayData(global::System.Collections.Generic.IList<int?> arrayData) {
+this.arrayData = global::DripSharp.Runtime.JavaCompat.CastList<int?>(arrayData);
 }
 
 public override string ToString() {
 global::System.Text.StringBuilder arraySpec = new global::System.Text.StringBuilder();
-foreach (int item in this.arrayData) {
+foreach (int? item in this.arrayData) {
 arraySpec.Append("[");
 if ((item != default!)) {
 arraySpec.Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(item));
@@ -97,7 +97,7 @@ this.setCharacterSet(characterSet);
 return this;
 }
 
-public virtual global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType withArrayData(global::System.Collections.Generic.IList<int> arrayData) {
+public virtual global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType withArrayData(global::System.Collections.Generic.IList<int?> arrayData) {
 this.setArrayData(arrayData);
 return this;
 }
@@ -115,13 +115,13 @@ return this.withArgumentsStringList(collection);
 }
 
 public virtual global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType addArrayData(params int[] arrayData) {
-global::System.Collections.Generic.IList<int> collection = global::DripSharp.Runtime.JavaOptional<global::System.Collections.Generic.IList<int>>.OfNullable(this.getArrayData()).OrElseGet(() => new global::System.Collections.Generic.List<int>());
+global::System.Collections.Generic.IList<int?> collection = global::DripSharp.Runtime.JavaCompat.CastList<int?>(global::DripSharp.Runtime.JavaOptional<global::System.Collections.Generic.IList<int?>>.OfNullable(this.getArrayData()).OrElseGet(() => new global::System.Collections.Generic.List<int?>()));
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, arrayData);
 return this.withArrayData(collection);
 }
 
 public virtual global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType addArrayData(global::System.Collections.Generic.ICollection<int> arrayData) {
-global::System.Collections.Generic.IList<int> collection = global::DripSharp.Runtime.JavaOptional<global::System.Collections.Generic.IList<int>>.OfNullable(this.getArrayData()).OrElseGet(() => new global::System.Collections.Generic.List<int>());
+global::System.Collections.Generic.IList<int?> collection = global::DripSharp.Runtime.JavaCompat.CastList<int?>(global::DripSharp.Runtime.JavaOptional<global::System.Collections.Generic.IList<int?>>.OfNullable(this.getArrayData()).OrElseGet(() => new global::System.Collections.Generic.List<int?>()));
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, arrayData);
 return this.withArrayData(collection);
 }

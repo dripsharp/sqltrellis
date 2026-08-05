@@ -47,7 +47,7 @@ global::DripSharp.Runtime.JavaCompat.ComputeIfAbsent(this.errors, capability, (k
 
 public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors() {
 global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> map = global::DripSharp.Runtime.JavaCompat.NewJavaDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>>();
-global::DripSharp.Runtime.JavaCompat.MapPutAll(map, this.errors);
+global::DripSharp.Runtime.JavaCompat.MapPutAll(map, global::DripSharp.Runtime.JavaCompat.CastDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>>(this.errors));
 foreach (var v in this.validatorForwards.Values) {
 foreach (global::DripSharp.Runtime.JavaMapEntry<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> e in global::DripSharp.Runtime.JavaCompat.MapEntrySet(v.getValidationErrors())) {
 global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> set = global::DripSharp.Runtime.JavaCompat.MapGet(map, e.Key);

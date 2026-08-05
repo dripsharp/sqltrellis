@@ -51,7 +51,7 @@ global::DripSharp.SqlTrellis.Util.RandomUtils.RANDOM.NextBytes(b);
 value = b[0];
 } else {
 if ((global::DripSharp.Runtime.JavaCompat.Equals(typeof(short), type) || global::DripSharp.Runtime.JavaCompat.Equals(typeof(short), type))) {
-value = (short)(global::DripSharp.SqlTrellis.Tests.Support.RandomInt(global::DripSharp.SqlTrellis.Util.RandomUtils.RANDOM, 15));
+value = unchecked((short)(global::DripSharp.SqlTrellis.Tests.Support.RandomInt(global::DripSharp.SqlTrellis.Util.RandomUtils.RANDOM, 15)));
 } else {
 if (global::DripSharp.Runtime.JavaCompat.Equals(typeof(char), type)) {
 value = global::DripSharp.SqlTrellis.Tests.Support.RandomString(1).ToCharArray()[0];

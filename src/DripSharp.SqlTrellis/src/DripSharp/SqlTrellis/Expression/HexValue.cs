@@ -22,7 +22,7 @@ public static sbyte[] hexStringToByteArray(string s) {
 int len = s.Length;
 sbyte[] data = new sbyte[(len / 2)];
 for (int i = 0; (i < len); i += 2) {
-data[(i / 2)] = unchecked((sbyte)((sbyte)(((global::DripSharp.Runtime.JavaCompat.CharacterDigit(s[i], 16) << unchecked((int)(4))) + global::DripSharp.Runtime.JavaCompat.CharacterDigit(s[(i + 1)], 16)))));
+data[(i / 2)] = unchecked((sbyte)(unchecked((sbyte)(((global::DripSharp.Runtime.JavaCompat.CharacterDigit(s[i], 16) << unchecked((int)(4))) + global::DripSharp.Runtime.JavaCompat.CharacterDigit(s[(i + 1)], 16))))));
 }
 return data;
 }

@@ -16,7 +16,7 @@ From a clean checkout:
 
 ```sh
 dotnet restore tests/DripSharp.SqlTrellis.Tests/DripSharp.SqlTrellis.Tests.csproj
-dotnet build tests/DripSharp.SqlTrellis.Tests/DripSharp.SqlTrellis.Tests.csproj --configuration Release --no-restore
+dotnet build tests/DripSharp.SqlTrellis.Tests/DripSharp.SqlTrellis.Tests.csproj --configuration Release --no-restore --no-incremental -warnaserror
 dotnet test tests/DripSharp.SqlTrellis.Tests/DripSharp.SqlTrellis.Tests.csproj --configuration Release --no-restore --no-build
 ```
 

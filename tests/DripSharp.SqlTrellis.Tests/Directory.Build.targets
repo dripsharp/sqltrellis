@@ -1,4 +1,7 @@
 <Project>
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS0108;CS0168;CS8632;CS8765;xUnit1013;xUnit1014;xUnit1026</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <None Update="Fixtures/**/*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

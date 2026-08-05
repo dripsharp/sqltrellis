@@ -16,7 +16,7 @@ private global::DripSharp.SqlTrellis.Expression.Expression expression = default!
 private bool __field_isFetchParamFirst = false;
 
 public virtual long getRowCount() {
-return global::DripSharp.Runtime.JavaCompat.UnboxObject<long>(((this.expression is global::DripSharp.SqlTrellis.Expression.LongValue) ? (long)(((global::DripSharp.SqlTrellis.Expression.LongValue)(this.expression!)).getValue()) : (long)(default!)));
+return global::DripSharp.Runtime.JavaCompat.UnboxObject<long>(((this.expression is global::DripSharp.SqlTrellis.Expression.LongValue) ? (long?)(((global::DripSharp.SqlTrellis.Expression.LongValue)(this.expression!)).getValue()) : (long?)(default!)));
 }
 
 public virtual void setRowCount(long l) {

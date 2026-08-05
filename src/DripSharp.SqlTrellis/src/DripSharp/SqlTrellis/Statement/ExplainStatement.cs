@@ -65,7 +65,7 @@ this.select = select;
 }
 
 public virtual global::DripSharp.Runtime.JavaLinkedHashMap<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option> getOptions() {
-return ((this.options == default!) ? (global::DripSharp.Runtime.JavaLinkedHashMap<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option>)(default!) : new global::DripSharp.Runtime.JavaLinkedHashMap<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option>(this.options));
+return ((this.options == default!) ? (global::DripSharp.Runtime.JavaLinkedHashMap<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option>)(default!) : new global::DripSharp.Runtime.JavaLinkedHashMap<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option>(global::DripSharp.Runtime.JavaCompat.CastDictionary<global::DripSharp.SqlTrellis.Statement.ExplainStatement.OptionType, global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option>(this.options)));
 }
 
 public virtual void addOption(global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option option) {

@@ -77,7 +77,7 @@ throw new global::System.NotSupportedException(global::DripSharp.Runtime.JavaCom
 }
 
 protected internal virtual bool cache(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, global::DripSharp.Runtime.JavaBiPredicate<global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named, bool>, global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named> fn) {
-global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named, bool> m = global::DripSharp.Runtime.JavaCompat.UnmodifiableMap(this.results);
+global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named, bool> m = global::DripSharp.Runtime.JavaCompat.UnmodifiableMap(global::DripSharp.Runtime.JavaCompat.CastDictionary<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named, bool>(this.results));
 if (this.cacheResults) {
 return global::DripSharp.Runtime.JavaCompat.UnboxObject<bool>(global::DripSharp.Runtime.JavaCompat.ComputeIfAbsent(this.results, named, (k) => fn(m, k)));
 } else {
