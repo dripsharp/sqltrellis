@@ -6,7 +6,16 @@ This is a generated publication repository. Durable source, translation, runtime
 
 ## Projects
 
-- [`DripSharp.SqlTrellis`](src/DripSharp.SqlTrellis/DripSharp.SqlTrellis.csproj) — SqlTrellis — JSqlParser for .NET (`net10.0`)
+- [`DripSharp.SqlTrellis`](src/DripSharp.SqlTrellis/DripSharp.SqlTrellis.csproj) — SqlTrellis — JSqlParser for .NET (`net10.0`, version `5.3.0-alpha.1`)
+
+## Install
+
+The first public packages are prereleases. Install the package you need from nuget.org:
+
+```sh
+dotnet add package DripSharp.SqlTrellis --version 5.3.0-alpha.1
+```
+
 
 ## Build and test
 

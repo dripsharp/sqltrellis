@@ -10,26 +10,37 @@
     <RootNamespace>DripSharp.SqlTrellis</RootNamespace>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+    <EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries>
     <PackageId>DripSharp.SqlTrellis</PackageId>
-    <Version>5.3.0-dripsharp.0</Version>
+    <Version>5.3.0-alpha.1</Version>
     <Title>SqlTrellis — JSqlParser for .NET</Title>
     <Description>JSqlParser for .NET, mechanically translated by DripSharp as an independent project not affiliated with or endorsed by the JSqlParser project.</Description>
-    <Authors>JSqlParser contributors,Vibeformer translation</Authors>
+    <Authors>Isak Sky</Authors>
+    <Copyright>Portions Copyright JSqlParser contributors; see LICENSE.txt and NOTICE.txt.</Copyright>
     <PackageTags>sql parser jsqlparser dotnet sqltrellis dripsharp</PackageTags>
-    <PackageProjectUrl>https://github.com/JSQLParser/JSqlParser</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JSQLParser/JSqlParser.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dripsharp/sqltrellis</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dripsharp/sqltrellis.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryCommit>8a9479a05c75fcb73d0ed167a822b9b18ab7abaa</RepositoryCommit>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src/**/*.cs" />
+    <SourceRoot Include="$(MSBuildProjectDirectory)/" RepositoryUrl="https://github.com/dripsharp/sqltrellis.git" SourceControl="git" RevisionId="$(RepositoryCommit)" SourceLinkUrl="https://raw.githubusercontent.com/dripsharp/sqltrellis/$(RepositoryCommit)/src/DripSharp.SqlTrellis/*" />
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>DripSharp.SqlTrellis.Tests</_Parameter1>
     </AssemblyAttribute>
     <EmbeddedResource Include="resources/rr/xhtml2rst.xsl" LogicalName="rr/xhtml2rst.xsl" />
     <None Include="src/Legal/LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+    <None Include="src/Legal/NOTICE.txt" Pack="true" PackagePath="NOTICE.txt" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 </Project>
