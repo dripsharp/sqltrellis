@@ -1,0 +1,12 @@
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/bin/Release/net10.0/DripSharp.SqlTrellis.deps.json
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/bin/Release/net10.0/DripSharp.SqlTrellis.dll
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/bin/Release/net10.0/DripSharp.SqlTrellis.pdb
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.AssemblyInfoInputs.cache
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.AssemblyInfo.cs
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.csproj.CoreCompileInputs.cache
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.sourcelink.json
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.dll
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/refint/DripSharp.SqlTrellis.dll
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/DripSharp.SqlTrellis.pdb
+/Users/admin/src/dripsharp/dripsharp/products/sqltrellis/src/DripSharp.SqlTrellis/obj/Release/net10.0/ref/DripSharp.SqlTrellis.dll
