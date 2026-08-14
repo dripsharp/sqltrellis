@@ -1,0 +1,18 @@
+# .NET build products
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+[Tt]est[Rr]esults/
+[Pp]ackages/
+*.dll
+*.exe
+*.pdb
+*.nupkg
+*.snupkg
+*.deps.json
+*.runtimeconfig.json
+
+# IDE-local state
+.vs/
+*.suo
+*.user
