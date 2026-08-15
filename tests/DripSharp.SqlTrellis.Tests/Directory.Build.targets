@@ -4,9 +4,11 @@
   </PropertyGroup>
   <ItemGroup>
     <None Update="Fixtures/**/*">
+      <TargetPath>%(Identity)</TargetPath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="src/main/jjtree/**/*">
+      <TargetPath>%(Identity)</TargetPath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
