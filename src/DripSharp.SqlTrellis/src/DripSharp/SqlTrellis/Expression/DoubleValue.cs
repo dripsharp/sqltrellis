@@ -53,4 +53,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.DoubleValue withValue(dou
 this.setValue(value);
 return this;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

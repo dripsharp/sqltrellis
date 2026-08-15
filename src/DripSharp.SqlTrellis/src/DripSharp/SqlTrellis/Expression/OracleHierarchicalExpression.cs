@@ -104,4 +104,8 @@ return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getStartExpr
 public virtual E getConnectExpression<E>(global::System.Type type) where E : global::DripSharp.SqlTrellis.Expression.Expression {
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getConnectExpression());
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

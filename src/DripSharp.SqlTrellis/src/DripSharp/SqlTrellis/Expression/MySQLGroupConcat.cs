@@ -107,4 +107,8 @@ global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, orderByElements);
 return this.withOrderByElements(collection);
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

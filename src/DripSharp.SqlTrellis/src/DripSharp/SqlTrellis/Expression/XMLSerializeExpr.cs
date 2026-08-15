@@ -46,4 +46,8 @@ this.dataType = dataType;
 public override string ToString() {
 return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("xmlserialize(xmlagg(xmltext(", this.expression), ")"), ((this.orderByElements != default!) ? global::DripSharp.Runtime.JavaCompat.Concat(" ORDER BY ", global::DripSharp.Runtime.JavaCompat.Collect(global::DripSharp.Runtime.JavaCompat.Map(global::DripSharp.Runtime.JavaCompat.Stream(this.orderByElements), (value0) => value0.ToString()), global::DripSharp.Runtime.JavaCompat.Joining(", "))) : "")), ") AS "), this.dataType), ")");
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

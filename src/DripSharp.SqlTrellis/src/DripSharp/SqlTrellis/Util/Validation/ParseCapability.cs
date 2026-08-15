@@ -41,4 +41,12 @@ executorService.Shutdown();
 public string getName() {
 return global::DripSharp.SqlTrellis.Util.Validation.ParseCapability.NAME;
 }
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
+}
 }

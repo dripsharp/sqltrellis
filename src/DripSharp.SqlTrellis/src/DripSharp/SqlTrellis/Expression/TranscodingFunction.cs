@@ -92,4 +92,8 @@ return builder.Append("CONVERT( ").Append(global::DripSharp.Runtime.JavaCompat.S
 public override string ToString() {
 return this.appendTo(new global::System.Text.StringBuilder()).ToString();
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

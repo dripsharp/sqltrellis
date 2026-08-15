@@ -106,7 +106,7 @@ return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this
 }
 
 public virtual string getName() {
-return (global::DripSharp.Runtime.JavaCompat.CollectionIsEmpty(this.names) ? global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetValidation.DEFAULT_NAME : global::DripSharp.Runtime.JavaCompat.Collect(global::DripSharp.Runtime.JavaCompat.Stream(this.names), global::DripSharp.Runtime.JavaCompat.Joining(global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed.SEPERATOR)));
+return (global::DripSharp.Runtime.JavaCompat.CollectionIsEmpty(this.names) ? global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetValidationStatics.DEFAULT_NAME : global::DripSharp.Runtime.JavaCompat.Collect(global::DripSharp.Runtime.JavaCompat.Stream(this.names), global::DripSharp.Runtime.JavaCompat.Joining(global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed.SEPERATOR)));
 }
 
 public virtual global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeatures() {
@@ -118,19 +118,49 @@ string name = ((global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetV
 return global::DripSharp.Runtime.JavaCompat.ToListValues(global::DripSharp.Runtime.JavaCompat.Map(global::DripSharp.Runtime.JavaCompat.StreamOf(global::DripSharp.Runtime.JavaCompat.StringSplit(name, global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed.SEPERATOR_REGEX, 0)), (value0) => global::DripSharp.Runtime.JavaCompat.StringTrim(value0)));
 }
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) => this.add(features);
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.add(features));
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(params global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet[] featureSets) => this.add(featureSets);
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(params global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet[] featureSets) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.add(featureSets));
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(params global::DripSharp.SqlTrellis.Parser.Feature.Feature[] features) => this.add(features);
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.add(params global::DripSharp.SqlTrellis.Parser.Feature.Feature[] features) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.add(features));
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) => this.remove(features);
+public virtual bool contains(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
+return global::DripSharp.Runtime.JavaCompat.CollectionContains(this.getFeatures(), feature);
+}
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(params global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet[] featureSets) => this.remove(featureSets);
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet.copy() => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.copy());
 
-global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(params global::DripSharp.SqlTrellis.Parser.Feature.Feature[] features) => this.remove(features);
+public virtual global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeaturesClone() {
+return new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(this.getFeatures());
+}
 
-global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.unmodifyable() => this.unmodifyable();
+public virtual global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getNotContained(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RemoveAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
+}
+
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.remove(features));
+
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(params global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet[] featureSets) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.remove(featureSets));
+
+global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.remove(params global::DripSharp.SqlTrellis.Parser.Feature.Feature[] features) => (global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet)(this.remove(features));
+
+public virtual global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> retainAll(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RetainAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
+}
+
+public virtual global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public virtual global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
+}
+
+global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet.unmodifyable() => (global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this.unmodifyable());
 
 public virtual void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
 global::DripSharp.SqlTrellis.Parser.Feature.Feature feature = context.get<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureContext.feature, typeof(global::DripSharp.SqlTrellis.Parser.Feature.Feature));

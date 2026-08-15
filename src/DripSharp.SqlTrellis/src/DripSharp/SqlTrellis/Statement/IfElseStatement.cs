@@ -71,4 +71,8 @@ return this.appendTo(new global::System.Text.StringBuilder()).ToString();
 public virtual T accept<T, S>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<T> statementVisitor, S context) {
 return statementVisitor.visit(this, context);
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

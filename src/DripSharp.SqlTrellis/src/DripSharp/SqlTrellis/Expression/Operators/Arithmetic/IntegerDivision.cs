@@ -23,11 +23,11 @@ public override string getStringExpression() {
 return "DIV";
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision)(base.withRightExpression(arg0)!);
 }
 }

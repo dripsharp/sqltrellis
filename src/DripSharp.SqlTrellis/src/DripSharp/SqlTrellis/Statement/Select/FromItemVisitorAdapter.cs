@@ -48,4 +48,40 @@ return default!;
 public virtual T visit<S>(global::DripSharp.SqlTrellis.Statement.Piped.FromQuery fromQuery, S context) {
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Schema.Table tableName) {
+this.visit<object>(tableName, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect lateralSubSelect) {
+this.visit<object>(lateralSubSelect, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedFromItem parenthesedFromItem) {
+this.visit<object>(parenthesedFromItem, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect selectBody) {
+this.visit<object>(selectBody, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.PlainSelect plainSelect) {
+this.visit<object>(plainSelect, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.SetOperationList setOperationList) {
+this.visit<object>(setOperationList, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.TableFunction tableFunction) {
+this.visit<object>(tableFunction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement) {
+this.visit<object>(tableStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.Values values) {
+this.visit<object>(values, (object)default!);
+}
 }

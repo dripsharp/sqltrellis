@@ -195,8 +195,7 @@ try {
 global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parse(sqlStr);
 } catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
 global::DripSharp.Testing.JavaAssertions.True((global::DripSharp.Runtime.JavaCompat.GetCause(ex)! is global::System.TimeoutException), null);
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }, null);
 global::DripSharp.Testing.JavaAssertions.Throws<global::DripSharp.SqlTrellis.JSQLParserException>(() => {
@@ -207,8 +206,7 @@ parser.withAllowComplexParsing(false);
 });
 } catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
 global::DripSharp.Testing.JavaAssertions.False((global::DripSharp.Runtime.JavaCompat.GetCause(ex)! is global::System.TimeoutException), null);
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }, null);
 }
@@ -224,8 +222,7 @@ parser.withAllowComplexParsing(false);
 });
 } catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
 global::DripSharp.Testing.JavaAssertions.False((global::DripSharp.Runtime.JavaCompat.GetCause(ex)! is global::System.TimeoutException), null);
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }, null);
 global::DripSharp.Testing.JavaAssertions.Throws<global::DripSharp.SqlTrellis.JSQLParserException>(() => {
@@ -236,8 +233,7 @@ parser.withAllowComplexParsing(true);
 });
 } catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
 global::DripSharp.Testing.JavaAssertions.True((global::DripSharp.Runtime.JavaCompat.GetCause(ex)! is global::System.TimeoutException), null);
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }, null);
 executorService.ShutdownNow();

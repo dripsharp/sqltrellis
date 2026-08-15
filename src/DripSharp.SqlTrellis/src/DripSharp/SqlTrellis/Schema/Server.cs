@@ -67,7 +67,7 @@ return "";
 }
 
 public string getUnquotedName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.serverName);
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.serverName);
 }
 
 public override string ToString() {

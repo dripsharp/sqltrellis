@@ -22,23 +22,23 @@ this.setLeftExpression(left);
 this.setRightExpression(right);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(base.withLeftExpression(expression)!);
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withLeftExpression(expression)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(base.withRightExpression(expression)!);
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withRightExpression(expression)))!);
 }
 
 public override T accept<T, S>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor, S context) {
 return expressionVisitor.visit(this, context);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo withOldOracleJoinSyntax(int arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(base.withOldOracleJoinSyntax(arg0)!);
+public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOldOracleJoinSyntax(int arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOldOracleJoinSyntax(arg0)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo withOraclePriorPosition(int arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(base.withOraclePriorPosition(arg0)!);
+public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOraclePriorPosition(int arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOraclePriorPosition(arg0)))!);
 }
 }

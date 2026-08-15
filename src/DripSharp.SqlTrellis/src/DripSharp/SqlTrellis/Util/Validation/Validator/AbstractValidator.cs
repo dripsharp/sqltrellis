@@ -219,6 +219,28 @@ protected internal virtual bool isNotEmpty(string c) {
 return ((c != default!) && !((c.Length == 0)));
 }
 
+public virtual global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability> capabilities) {
+global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> map = global::DripSharp.Runtime.JavaCompat.NewJavaDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>>();
+foreach (global::DripSharp.Runtime.JavaMapEntry<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> e in global::DripSharp.Runtime.JavaCompat.MapEntrySet(this.getValidationErrors())) {
+if (global::DripSharp.Runtime.JavaCompat.CollectionContains(capabilities, e.Key)) {
+global::DripSharp.Runtime.JavaCompat.MapPut(map, e.Key, e.Value);
+}
+}
+return map;
+}
+
+public virtual global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities) {
+return ((global::DripSharp.SqlTrellis.Util.Validation.IValidator)(this)).getValidationErrors(global::DripSharp.Runtime.JavaCompat.AsList<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability>(capabilities));
+}
+
+public virtual bool isValid() {
+return global::DripSharp.Runtime.JavaCompat.MapIsEmpty(this.getValidationErrors());
+}
+
+public virtual bool isValid(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities) {
+return global::DripSharp.Runtime.JavaCompat.MapIsEmpty(((global::DripSharp.SqlTrellis.Util.Validation.IValidator)(this)).getValidationErrors(capabilities));
+}
+
 public abstract void validate(S statement);
 
 public AbstractValidator() {}

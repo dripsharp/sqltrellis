@@ -56,4 +56,8 @@ return global::DripSharp.Runtime.JavaCompat.Equals(this.value, that.value);
 public override int GetHashCode() {
 return global::DripSharp.Runtime.JavaCompat.Hash(this.value);
 }
+
+public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

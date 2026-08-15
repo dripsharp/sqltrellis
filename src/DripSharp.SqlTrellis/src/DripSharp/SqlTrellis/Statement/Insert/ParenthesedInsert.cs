@@ -51,4 +51,6 @@ return builder.ToString();
 public override T accept<T, S>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<T> statementVisitor, S context) {
 return statementVisitor.visit(this, context);
 }
+
+global::DripSharp.SqlTrellis.Statement.ParenthesedStatement global::DripSharp.SqlTrellis.Statement.ParenthesedStatement.withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) => (global::DripSharp.SqlTrellis.Statement.ParenthesedStatement)(this.withAlias(alias));
 }

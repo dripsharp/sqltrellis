@@ -34,4 +34,8 @@ this.validateOptionalExpressions(global::DripSharp.Runtime.JavaCompat.CastList<g
 }
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.GroupByElement groupBy) {
+this.visit<object>(groupBy, (object)default!);
+}
 }

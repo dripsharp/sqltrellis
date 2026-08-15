@@ -56,7 +56,7 @@ i++;
 if (!(global::DripSharp.Runtime.JavaCompat.Equals(testMethodName, "testRelObjectNameExt"))) {
 int classNameSeparator = testClassName.LastIndexOf(".", global::System.StringComparison.Ordinal);
 string simpleClassName = testClassName.Substring((classNameSeparator + 1));
-string packageName = global::DripSharp.Runtime.JavaCompat.StringSubstring(testClassName, 0, classNameSeparator).Replace(".", global::DripSharp.SqlTrellis.Tests.Support.JavaSystemProperty("file.separator"), global::System.StringComparison.Ordinal);
+string packageName = global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(global::DripSharp.Runtime.JavaCompat.StringSubstring(testClassName, 0, classNameSeparator), ".", global::DripSharp.SqlTrellis.Tests.Support.JavaSystemProperty("file.separator"));
 global::System.IO.FileInfo file = global::DripSharp.SqlTrellis.Tests.Support.TestFile(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.SqlTrellis.Tests.Support.JavaSystemProperty("java.io.tmpdir"), global::DripSharp.SqlTrellis.Tests.Support.JavaSystemProperty("file.separator")), packageName));
 global::DripSharp.SqlTrellis.Tests.Support.JavaMkdirs(file);
 file = new global::System.IO.FileInfo(global::System.IO.Path.Combine(file.FullName, global::DripSharp.Runtime.JavaCompat.Concat(simpleClassName, ".sql")));

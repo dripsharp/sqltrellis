@@ -11,57 +11,39 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface FromItemVisitor<out T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Schema.Table tableName, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Schema.Table tableName) {
-this.visit<object>(tableName, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Schema.Table tableName);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect selectBody, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect selectBody) {
-this.visit<object>(selectBody, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect selectBody);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect lateralSubSelect, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect lateralSubSelect) {
-this.visit<object>(lateralSubSelect, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect lateralSubSelect);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.TableFunction tableFunction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.TableFunction tableFunction) {
-this.visit<object>(tableFunction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.TableFunction tableFunction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedFromItem parenthesedFromItem, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedFromItem parenthesedFromItem) {
-this.visit<object>(parenthesedFromItem, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedFromItem parenthesedFromItem);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.Values values, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.Values values) {
-this.visit<object>(values, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.Values values);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.PlainSelect plainSelect, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.PlainSelect plainSelect) {
-this.visit<object>(plainSelect, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.PlainSelect plainSelect);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.SetOperationList setOperationList, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.SetOperationList setOperationList) {
-this.visit<object>(setOperationList, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.SetOperationList setOperationList);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement) {
-this.visit<object>(tableStatement, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Piped.FromQuery fromQuery, S context);
 }

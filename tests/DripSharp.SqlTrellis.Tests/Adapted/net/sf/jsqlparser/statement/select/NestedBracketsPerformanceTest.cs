@@ -103,9 +103,9 @@ global::DripSharp.Testing.JavaAssertions.Equal("concat(concat(concat('A','B'),'B
 
 private string buildRecursiveBracketExpression(string template, string finalExpression, int depth) {
 if ((depth == 0)) {
-return template.Replace("$1", finalExpression, global::System.StringComparison.Ordinal);
+return global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(template, "$1", finalExpression);
 }
-return template.Replace("$1", this.buildRecursiveBracketExpression(template, finalExpression, (depth - 1)), global::System.StringComparison.Ordinal);
+return global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(template, "$1", this.buildRecursiveBracketExpression(template, finalExpression, (depth - 1)));
 }
 
 public virtual void testIssue1103() {

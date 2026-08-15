@@ -52,4 +52,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.UserVariable withDoubleAd
 this.setDoubleAdd(doubleAdd);
 return this;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

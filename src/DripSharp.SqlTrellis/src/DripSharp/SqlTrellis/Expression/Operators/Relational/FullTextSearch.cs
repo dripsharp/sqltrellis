@@ -90,4 +90,8 @@ global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<glob
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, matchColumns);
 return this.withMatchColumns(collection);
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

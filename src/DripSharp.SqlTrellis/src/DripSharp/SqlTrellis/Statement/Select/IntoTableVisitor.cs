@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface IntoTableVisitor<T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Schema.Table tableName, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Schema.Table tableName) {
-this.visit<object>(tableName, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Schema.Table tableName);
 }

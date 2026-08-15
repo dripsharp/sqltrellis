@@ -9,17 +9,19 @@
 namespace DripSharp.SqlTrellis.Schema;
 
 public interface MultiPartName {
-public static readonly global::System.Text.RegularExpressions.Regex LEADING_TRAILING_QUOTES_PATTERN = global::DripSharp.Runtime.JavaCompat.CompileRegex("^[\"\\[`]+|[\"\\]`]+$");
-
-public static string unquote(string quotedIdentifier) {
-return ((quotedIdentifier != default!) ? global::DripSharp.Runtime.JavaCompat.RegexMatcher(global::DripSharp.SqlTrellis.Schema.MultiPartName.LEADING_TRAILING_QUOTES_PATTERN, quotedIdentifier).ReplaceAll("") : (string)(default!));
-}
-
-public static bool isQuoted(string identifier) {
-return ((identifier != default!) && global::DripSharp.Runtime.JavaCompat.RegexMatcher(global::DripSharp.SqlTrellis.Schema.MultiPartName.LEADING_TRAILING_QUOTES_PATTERN, identifier).Find());
-}
-
 public string getFullyQualifiedName();
 
 public string getUnquotedName();
+}
+
+public static class MultiPartNameStatics {
+public static readonly global::System.Text.RegularExpressions.Regex LEADING_TRAILING_QUOTES_PATTERN = global::DripSharp.Runtime.JavaCompat.CompileRegex("^[\"\\[`]+|[\"\\]`]+$");
+
+public static string unquote(string quotedIdentifier) {
+return ((quotedIdentifier != default!) ? global::DripSharp.Runtime.JavaCompat.RegexMatcher(global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.LEADING_TRAILING_QUOTES_PATTERN, quotedIdentifier).ReplaceAll("") : (string)(default!));
+}
+
+public static bool isQuoted(string identifier) {
+return ((identifier != default!) && global::DripSharp.Runtime.JavaCompat.RegexMatcher(global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.LEADING_TRAILING_QUOTES_PATTERN, identifier).Find());
+}
 }

@@ -75,15 +75,47 @@ public string getName() {
 return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.SqlTrellis.Util.Validation.Feature.DatabaseType.SQLSERVER.getName(), " "), this.getVersionString());
 }
 
+public bool contains(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
+return global::DripSharp.Runtime.JavaCompat.CollectionContains(this.getFeatures(), feature);
+}
+
+public global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet copy() {
+return new global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed().add(this.getFeatures());
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeaturesClone() {
+return new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(this.getFeatures());
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
+return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this)).toError(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.EnumName(feature), " not supported."));
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getNotContained(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RemoveAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> retainAll(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RetainAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
+}
+
 public void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
 global::DripSharp.SqlTrellis.Parser.Feature.Feature feature = context.get<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureContext.feature, typeof(global::DripSharp.SqlTrellis.Parser.Feature.Feature));
 if (!(((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).contains(feature))) {
 errorConsumer(this.getMessage(feature));
 }
-}
-
-public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
-return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this)).toError(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.EnumName(feature), " not supported."));
 }
 
 public static SQLVersion[] values() => global::DripSharp.Runtime.JavaCompat.EnumValues<SQLVersion>();

@@ -41,4 +41,8 @@ return this.columnName;
 public void setColumnName(string columnName) {
 this.columnName = columnName;
 }
+
+public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

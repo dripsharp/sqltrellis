@@ -86,4 +86,8 @@ this.node = node;
 public virtual K accept<K, S>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<K> expressionVisitor, S context) {
 return expressionVisitor.visit<S, T>(this, context);
 }
+
+public virtual void accept<MethodT>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<MethodT> expressionVisitor) {
+this.accept<MethodT, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<MethodT>)(expressionVisitor), (object)default!);
+}
 }

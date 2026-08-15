@@ -84,7 +84,7 @@ return this.columnName;
 }
 
 public virtual string getUnquotedColumnName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.columnName);
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.columnName);
 }
 
 public virtual void setColumnName(string @string) {
@@ -104,7 +104,7 @@ return this.getFullyQualifiedName(false);
 }
 
 public virtual string getUnquotedName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.columnName);
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.columnName);
 }
 
 public virtual string getFullyQualifiedName(bool aliases) {
@@ -170,5 +170,9 @@ return this.commentText;
 
 public virtual void setCommentText(string commentText) {
 this.commentText = commentText;
+}
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
 }
 }

@@ -11,29 +11,15 @@ namespace DripSharp.SqlTrellis.Parser.Feature;
 public interface FeatureSet {
 public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeatures();
 
-public bool contains(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
-return global::DripSharp.Runtime.JavaCompat.CollectionContains(this.getFeatures(), feature);
-}
+public bool contains(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature);
 
-public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeaturesClone() {
-return new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(this.getFeatures());
-}
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeaturesClone();
 
-public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getNotContained(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
-global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = this.getFeaturesClone();
-global::DripSharp.Runtime.JavaCompat.RemoveAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
-return f;
-}
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getNotContained(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features);
 
-public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> retainAll(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
-global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = this.getFeaturesClone();
-global::DripSharp.Runtime.JavaCompat.RetainAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
-return f;
-}
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> retainAll(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features);
 
-public global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet copy() {
-return new global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed().add(this.getFeatures());
-}
+public global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet copy();
 }
 
 public sealed class __FeatureSetFunctionalAdapter : global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet {
@@ -45,5 +31,29 @@ this.implementation = implementation;
 
 public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeatures() {
 return this.implementation();
+}
+
+public bool contains(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
+return global::DripSharp.Runtime.JavaCompat.CollectionContains(this.getFeatures(), feature);
+}
+
+public global::DripSharp.SqlTrellis.Parser.Feature.ModifyableFeatureSet copy() {
+return new global::DripSharp.SqlTrellis.Util.Validation.Feature.FeaturesAllowed().add(this.getFeatures());
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeaturesClone() {
+return new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(this.getFeatures());
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getNotContained(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RemoveAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
+}
+
+public global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> retainAll(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Parser.Feature.Feature> features) {
+global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> f = ((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).getFeaturesClone();
+global::DripSharp.Runtime.JavaCompat.RetainAll(f, global::DripSharp.Runtime.JavaCompat.CastObjects(features));
+return f;
 }
 }

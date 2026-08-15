@@ -199,5 +199,9 @@ public virtual E getRightExpression<E>(global::System.Type type) where E : globa
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getRightExpression());
 }
 
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
+
 public abstract T accept<T, S>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor, S context);
 }

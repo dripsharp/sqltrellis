@@ -9,29 +9,15 @@
 namespace DripSharp.SqlTrellis.Util.Validation;
 
 public interface Validator<S> : global::DripSharp.SqlTrellis.Util.Validation.IValidator {
-public bool isValid() {
-return global::DripSharp.Runtime.JavaCompat.MapIsEmpty(this.getValidationErrors());
-}
+public bool isValid();
 
-public bool isValid(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities) {
-return global::DripSharp.Runtime.JavaCompat.MapIsEmpty(this.getValidationErrors(capabilities));
-}
+public bool isValid(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities);
 
 public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors();
 
-public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities) {
-return this.getValidationErrors(global::DripSharp.Runtime.JavaCompat.AsList<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability>(capabilities));
-}
+public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(params global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability[] capabilities);
 
-public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability> capabilities) {
-global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> map = global::DripSharp.Runtime.JavaCompat.NewJavaDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>>();
-foreach (global::DripSharp.Runtime.JavaMapEntry<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> e in global::DripSharp.Runtime.JavaCompat.MapEntrySet(this.getValidationErrors())) {
-if (global::DripSharp.Runtime.JavaCompat.CollectionContains(capabilities, e.Key)) {
-global::DripSharp.Runtime.JavaCompat.MapPut(map, e.Key, e.Value);
-}
-}
-return map;
-}
+public global::System.Collections.Generic.IDictionary<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability, global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Util.Validation.ValidationException>> getValidationErrors(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability> capabilities);
 
 public void setContext(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext ctx);
 

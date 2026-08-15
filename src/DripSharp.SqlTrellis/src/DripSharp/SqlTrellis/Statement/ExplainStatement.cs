@@ -176,12 +176,16 @@ this.value = value;
 }
 
 public virtual string formatOption() {
-return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.EnumName(this.type).Replace("_", " ", global::System.StringComparison.Ordinal), ((this.value != default!) ? global::DripSharp.Runtime.JavaCompat.Concat(" ", this.value) : ""));
+return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(global::DripSharp.Runtime.JavaCompat.EnumName(this.type), "_", " "), ((this.value != default!) ? global::DripSharp.Runtime.JavaCompat.Concat(" ", this.value) : ""));
 }
 
 public virtual global::DripSharp.SqlTrellis.Statement.ExplainStatement.Option withValue(string value) {
 this.setValue(value);
 return this;
 }
+}
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
 }
 }

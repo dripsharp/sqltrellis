@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface SelectItemVisitor<out T> {
 public T visit<S, TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.SelectItem<TWildcard0_0> selectItem, S context) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 
-public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.SelectItem<TWildcard0_0> selectItem) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
-this.visit<object, TWildcard0_0>(selectItem, (object)default!);
-}
+public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.SelectItem<TWildcard0_0> selectItem) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 }

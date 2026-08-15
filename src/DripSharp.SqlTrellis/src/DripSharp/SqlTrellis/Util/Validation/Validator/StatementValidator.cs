@@ -438,4 +438,16 @@ this.visit<object>(alterSystemStatement, (object)default!);
 public virtual void visit(global::DripSharp.SqlTrellis.Statement.UnsupportedStatement unsupportedStatement) {
 this.visit<object>(unsupportedStatement, (object)default!);
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Delete.ParenthesedDelete parenthesedDelete) {
+this.visit<object>(parenthesedDelete, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Insert.ParenthesedInsert parenthesedInsert) {
+this.visit<object>(parenthesedInsert, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Update.ParenthesedUpdate parenthesedUpdate) {
+this.visit<object>(parenthesedUpdate, (object)default!);
+}
 }

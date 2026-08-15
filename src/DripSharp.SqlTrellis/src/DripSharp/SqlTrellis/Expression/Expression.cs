@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Expression;
 public interface Expression : global::DripSharp.SqlTrellis.Model, global::DripSharp.SqlTrellis.Parser.ASTNodeAccess {
 public T accept<T, S>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor, S context);
 
-public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
-this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
-}
+public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor);
 }

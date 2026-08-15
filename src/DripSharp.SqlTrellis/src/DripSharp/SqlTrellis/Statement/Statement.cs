@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Statement;
 public interface Statement : global::DripSharp.SqlTrellis.Model {
 public T accept<T, S>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<T> statementVisitor, S context);
 
-public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
-this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
-}
+public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor);
 }

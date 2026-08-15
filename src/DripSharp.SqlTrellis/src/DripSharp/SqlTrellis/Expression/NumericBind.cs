@@ -31,4 +31,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.NumericBind withBindId(in
 this.setBindId(bindId);
 return this;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

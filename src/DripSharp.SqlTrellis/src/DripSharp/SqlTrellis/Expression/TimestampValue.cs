@@ -54,4 +54,8 @@ public global::DripSharp.SqlTrellis.Expression.TimestampValue withValue(global::
 this.setValue(value);
 return this;
 }
+
+public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

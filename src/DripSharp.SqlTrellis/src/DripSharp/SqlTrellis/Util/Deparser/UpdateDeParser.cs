@@ -117,4 +117,8 @@ base.builder.Append(((orderBy.getNullOrdering() == global::DripSharp.SqlTrellis.
 }
 return base.builder;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy) {
+this.visit<object>(orderBy, (object)default!);
+}
 }

@@ -44,7 +44,7 @@ string sql = "CREATE VIEW test AS SELECT a, b FROM mytable";
 global::System.Text.StringBuilder b = new global::System.Text.StringBuilder(sql);
 global::DripSharp.SqlTrellis.Parser.SimpleNode node = (global::DripSharp.SqlTrellis.Parser.SimpleNode)(global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parseAST(sql)!);
 node.dump("*");
-global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.JJTSTATEMENT, node.getId(), null);
+global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.JJTSTATEMENT, node.getId(), null);
 node.jjtAccept(new Anonymous_79_24(b), (object)default!);
 global::DripSharp.Testing.JavaAssertions.Equal("CREATE VIEW test AS SELECT \"a\", \"b\" FROM mytable", b.ToString(), null);
 }
@@ -60,7 +60,7 @@ this.idxDelta = 0;
 internal int idxDelta;
 
 public override object visit(global::DripSharp.SqlTrellis.Parser.SimpleNode node, object data) {
-if ((global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.JJTCOLUMN == node.getId())) {
+if ((global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.JJTCOLUMN == node.getId())) {
 this.__capture_0.Insert(((node.jjtGetFirstToken().beginColumn - 1) + this.idxDelta), '"');
 this.idxDelta++;
 this.__capture_0.Insert((node.jjtGetLastToken().endColumn + this.idxDelta), '"');

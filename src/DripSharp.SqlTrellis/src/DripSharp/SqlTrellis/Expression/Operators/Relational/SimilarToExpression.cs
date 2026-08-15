@@ -55,11 +55,11 @@ this.setNot(not);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression)(base.withRightExpression(arg0)!);
 }
 }

@@ -11,58 +11,31 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface FromItem : global::DripSharp.SqlTrellis.Parser.ASTNodeAccess {
 public T accept<T, S>(global::DripSharp.SqlTrellis.Statement.Select.FromItemVisitor<T> fromItemVisitor, S context);
 
-public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.FromItemVisitor<TWildcard0_0> fromItemVisitor) {
-this.accept<TWildcard0_0, object>(fromItemVisitor, (object)default!);
-}
+public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.FromItemVisitor<TWildcard0_0> fromItemVisitor);
 
 public global::DripSharp.SqlTrellis.Expression.Alias getAlias();
 
 public void setAlias(global::DripSharp.SqlTrellis.Expression.Alias alias);
 
-public global::DripSharp.SqlTrellis.Statement.Select.FromItem withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
-this.setAlias(alias);
-return this;
-}
+public global::DripSharp.SqlTrellis.Statement.Select.FromItem withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias);
 
 public global::DripSharp.SqlTrellis.Statement.Select.Pivot getPivot();
 
 public void setPivot(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot);
 
-public global::DripSharp.SqlTrellis.Statement.Select.FromItem withPivot(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot) {
-this.setPivot(pivot);
-return this;
-}
+public global::DripSharp.SqlTrellis.Statement.Select.FromItem withPivot(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot);
 
 public global::DripSharp.SqlTrellis.Statement.Select.UnPivot getUnPivot();
 
 public void setUnPivot(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot);
 
-public global::DripSharp.SqlTrellis.Statement.Select.FromItem withUnPivot(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot) {
-this.setUnPivot(unpivot);
-return this;
-}
+public global::DripSharp.SqlTrellis.Statement.Select.FromItem withUnPivot(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot);
 
 public global::DripSharp.SqlTrellis.Statement.Select.SampleClause getSampleClause();
 
 public global::DripSharp.SqlTrellis.Statement.Select.FromItem setSampleClause(global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause);
 
-public global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias) {
-return this.appendTo(builder, alias, (global::DripSharp.SqlTrellis.Statement.Select.SampleClause)default!, (global::DripSharp.SqlTrellis.Statement.Select.Pivot)default!, (global::DripSharp.SqlTrellis.Statement.Select.UnPivot)default!);
-}
+public global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias);
 
-public global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias, global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause, global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot, global::DripSharp.SqlTrellis.Statement.Select.UnPivot unPivot) {
-if ((alias != default!)) {
-builder.Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(alias));
-}
-if ((sampleClause != default!)) {
-builder.Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(sampleClause));
-}
-if ((pivot != default!)) {
-builder.Append(" ").Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(pivot));
-}
-if ((unPivot != default!)) {
-builder.Append(" ").Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(unPivot));
-}
-return builder;
-}
+public global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias, global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause, global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot, global::DripSharp.SqlTrellis.Statement.Select.UnPivot unPivot);
 }

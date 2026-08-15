@@ -9,7 +9,7 @@
 namespace DripSharp.SqlTrellis.Statement.Alter;
 
 public class AlterExpression {
-private readonly global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Statement.ReferentialAction> referentialActions = new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Statement.ReferentialAction>(2);
+private readonly global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Statement.ReferentialAction> referentialActions = new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Statement.ReferentialAction>();
 
 private global::DripSharp.SqlTrellis.Statement.Alter.AlterOperation operation = null!;
 
@@ -1191,23 +1191,23 @@ public override string ToString() {
 return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(this.getColumnName(), (this.withType ? " TYPE " : ((this.getColDataType() == default!) ? "" : " "))), this.toStringDataTypeAndSpec());
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType withColDataType(global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType colDataType) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.ColumnDefinition withColDataType(global::DripSharp.SqlTrellis.Statement.Create.Table.ColDataType colDataType) {
 return (global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType)(base.withColDataType(colDataType)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType withColumnName(string columnName) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.ColumnDefinition withColumnName(string columnName) {
 return (global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType)(base.withColumnName(columnName)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType addColumnSpecs(params string[] columnSpecs) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.ColumnDefinition addColumnSpecs(params string[] columnSpecs) {
 return (global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType)(base.addColumnSpecs(columnSpecs)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType addColumnSpecs(global::System.Collections.Generic.ICollection<string> columnSpecs) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.ColumnDefinition addColumnSpecs(global::System.Collections.Generic.ICollection<string> columnSpecs) {
 return (global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType)(base.addColumnSpecs(columnSpecs)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType withColumnSpecs(global::System.Collections.Generic.IList<string> columnSpecs) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.ColumnDefinition withColumnSpecs(global::System.Collections.Generic.IList<string> columnSpecs) {
 return (global::DripSharp.SqlTrellis.Statement.Alter.AlterExpression.ColumnDataType)(base.withColumnSpecs(columnSpecs)!);
 }
 }

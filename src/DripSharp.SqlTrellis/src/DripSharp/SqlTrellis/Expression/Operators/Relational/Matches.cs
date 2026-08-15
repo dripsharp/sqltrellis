@@ -17,19 +17,19 @@ public override string getStringExpression() {
 return "@@";
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(base.withLeftExpression(arg0)!);
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withLeftExpression(arg0)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(base.withRightExpression(arg0)!);
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withRightExpression(arg0)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches withOldOracleJoinSyntax(int oldOracleJoinSyntax) {
+public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOldOracleJoinSyntax(int oldOracleJoinSyntax) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(base.withOldOracleJoinSyntax(oldOracleJoinSyntax)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches withOraclePriorPosition(int oraclePriorPosition) {
+public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOraclePriorPosition(int oraclePriorPosition) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches)(base.withOraclePriorPosition(oraclePriorPosition)!);
 }
 }

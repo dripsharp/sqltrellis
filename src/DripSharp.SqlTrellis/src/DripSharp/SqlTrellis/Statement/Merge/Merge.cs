@@ -254,4 +254,8 @@ return this;
 public virtual E getOnCondition<E>(global::System.Type type) where E : global::DripSharp.SqlTrellis.Expression.Expression {
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getOnCondition());
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

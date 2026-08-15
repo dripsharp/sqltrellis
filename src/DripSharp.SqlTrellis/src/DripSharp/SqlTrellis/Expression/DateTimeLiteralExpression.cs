@@ -80,4 +80,8 @@ public static DateTime valueOf(string name) => global::DripSharp.Runtime.JavaCom
 
 public override string ToString() => global::DripSharp.Runtime.JavaCompat.EnumName(this);
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

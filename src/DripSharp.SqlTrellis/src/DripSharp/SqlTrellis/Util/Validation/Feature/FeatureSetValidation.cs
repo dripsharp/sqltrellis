@@ -9,26 +9,15 @@
 namespace DripSharp.SqlTrellis.Util.Validation.Feature;
 
 public interface FeatureSetValidation : global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet, global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability {
-public const string DEFAULT_NAME = "feature set";
-
-public new void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
-global::DripSharp.SqlTrellis.Parser.Feature.Feature feature = context.get<global::DripSharp.SqlTrellis.Parser.Feature.Feature>(global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureContext.feature, typeof(global::DripSharp.SqlTrellis.Parser.Feature.Feature));
-if (!(((global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet)(this)).contains(feature))) {
-errorConsumer(this.getMessage(feature));
-}
-}
+public new void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer);
 
 public new global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> getFeatures();
 
 public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature);
 
-public new string getName() {
-return global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetValidation.DEFAULT_NAME;
+public new string getName();
 }
 
-void global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability.validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) => this.validate(context, errorConsumer);
-
-global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Parser.Feature.Feature> global::DripSharp.SqlTrellis.Parser.Feature.FeatureSet.getFeatures() => (this.getFeatures());
-
-string global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability.getName() => (this.getName());
+public static class FeatureSetValidationStatics {
+public const string DEFAULT_NAME = "feature set";
 }

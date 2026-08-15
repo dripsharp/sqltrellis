@@ -128,4 +128,8 @@ public static Modifiers valueOf(string name) => global::DripSharp.Runtime.JavaCo
 
 public override string ToString() => global::DripSharp.Runtime.JavaCompat.EnumName(this);
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

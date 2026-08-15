@@ -50,4 +50,8 @@ returnValue.Append(" AT TIME ZONE ").Append(global::DripSharp.Runtime.JavaCompat
 }
 return returnValue.ToString();
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

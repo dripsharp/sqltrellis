@@ -10,7 +10,7 @@ string expectedSQLStr = "SELECT 1 FROM dual t WHERE a = b";
 global::DripSharp.SqlTrellis.Schema.Table table = new global::DripSharp.SqlTrellis.Schema.Table().withName("dual").withAlias(new global::DripSharp.SqlTrellis.Expression.Alias("t", false));
 global::DripSharp.SqlTrellis.Schema.Column columnA = new global::DripSharp.SqlTrellis.Schema.Column().withColumnName("a");
 global::DripSharp.SqlTrellis.Schema.Column columnB = new global::DripSharp.SqlTrellis.Schema.Column().withColumnName("b");
-global::DripSharp.SqlTrellis.Expression.Expression whereExpression = new global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo().withLeftExpression(columnA).withRightExpression(columnB);
+global::DripSharp.SqlTrellis.Expression.Expression whereExpression = ((global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo)(new global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo().withLeftExpression(columnA))).withRightExpression(columnB)));
 global::DripSharp.SqlTrellis.Statement.Select.PlainSelect select = new global::DripSharp.SqlTrellis.Statement.Select.PlainSelect().addSelectItem(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(1))).withFromItem(table).withWhere(whereExpression);
 global::DripSharp.Testing.JavaAssertions.Equal(expectedSQLStr, select.ToString(), null);
 global::System.Text.StringBuilder builder = new global::System.Text.StringBuilder();

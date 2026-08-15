@@ -46,12 +46,12 @@ this.setPrefix(prefix);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect withSelect(global::DripSharp.SqlTrellis.Statement.Select.Select select) {
+public override global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect withSelect(global::DripSharp.SqlTrellis.Statement.Select.Select select) {
 this.setSelect(select);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
+public override global::DripSharp.SqlTrellis.Statement.Select.Select withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
 this.setAlias(alias);
 return this;
 }

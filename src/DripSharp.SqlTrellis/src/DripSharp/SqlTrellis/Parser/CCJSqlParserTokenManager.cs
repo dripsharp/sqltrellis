@@ -14135,14 +14135,14 @@ this.configuration = new global::DripSharp.SqlTrellis.Parser.Feature.FeatureConf
 this.charLiteralIndex = -1;
 this.squaredBracketOpenIndex = -1;
 {
-for (int i__53_18 = 0; (i__53_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage.Length); i__53_18++) {
-if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage[i__53_18], "<S_CHAR_LITERAL>")) {
+for (int i__53_18 = 0; (i__53_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage.Length); i__53_18++) {
+if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage[i__53_18], "<S_CHAR_LITERAL>")) {
 this.charLiteralIndex = i__53_18;
 break;
 }
 }
-for (int i__59_18 = 0; (i__59_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage.Length); i__59_18++) {
-if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage[i__59_18], "\"[\"")) {
+for (int i__59_18 = 0; (i__59_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage.Length); i__59_18++) {
+if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage[i__59_18], "\"[\"")) {
 this.squaredBracketOpenIndex = i__59_18;
 break;
 }
@@ -14167,14 +14167,14 @@ this.configuration = new global::DripSharp.SqlTrellis.Parser.Feature.FeatureConf
 this.charLiteralIndex = -1;
 this.squaredBracketOpenIndex = -1;
 {
-for (int i__53_18 = 0; (i__53_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage.Length); i__53_18++) {
-if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage[i__53_18], "<S_CHAR_LITERAL>")) {
+for (int i__53_18 = 0; (i__53_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage.Length); i__53_18++) {
+if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage[i__53_18], "<S_CHAR_LITERAL>")) {
 this.charLiteralIndex = i__53_18;
 break;
 }
 }
-for (int i__59_18 = 0; (i__59_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage.Length); i__59_18++) {
-if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.tokenImage[i__59_18], "\"[\"")) {
+for (int i__59_18 = 0; (i__59_18 < global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage.Length); i__59_18++) {
+if (global::DripSharp.Runtime.JavaCompat.Equals(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.tokenImage[i__59_18], "\"[\"")) {
 this.squaredBracketOpenIndex = i__59_18;
 break;
 }

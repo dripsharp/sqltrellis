@@ -104,4 +104,8 @@ global::System.Collections.Generic.IList<string> collection = global::DripSharp.
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, schemaPath);
 return this.withSchemaPath(collection);
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

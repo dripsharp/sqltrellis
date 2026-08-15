@@ -73,4 +73,8 @@ builder.Append("\\x").Append(digits[i]).Append(digits[(i + 1)]);
 }
 return new global::DripSharp.SqlTrellis.Expression.StringValue(builder.ToString());
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

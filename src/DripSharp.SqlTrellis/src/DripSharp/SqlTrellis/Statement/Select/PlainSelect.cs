@@ -668,7 +668,7 @@ this.setOracleHint(oracleHint);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.PlainSelect withOracleSiblings(bool oracleSiblings) {
+public override global::DripSharp.SqlTrellis.Statement.Select.Select withOracleSiblings(bool oracleSiblings) {
 this.setOracleSiblings(oracleSiblings);
 return this;
 }

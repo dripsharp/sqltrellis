@@ -85,4 +85,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.OracleHint withSingleLine
 this.setSingleLine(singleLine);
 return this;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

@@ -111,4 +111,8 @@ global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.
 global::DripSharp.Runtime.JavaCompat.AddAll(collection, alterExpressions);
 return this.withAlterExpressions(collection);
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

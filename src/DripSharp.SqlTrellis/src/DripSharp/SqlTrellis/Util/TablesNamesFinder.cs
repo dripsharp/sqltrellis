@@ -1333,4 +1333,428 @@ public virtual Void visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.R
 this.visitBinaryExpression(geometryDistance);
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.AllValue allValue) {
+this.visit<object>(allValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.AnalyticExpression analyticExpression) {
+this.visit<object>(analyticExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.AnyComparisonExpression anyComparisonExpression) {
+this.visit<object>(anyComparisonExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ArrayConstructor arrayConstructor) {
+this.visit<object>(arrayConstructor, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ArrayExpression arrayExpression) {
+this.visit<object>(arrayExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.BooleanValue booleanValue) {
+this.visit<object>(booleanValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.CaseExpression caseExpression) {
+this.visit<object>(caseExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.CastExpression castExpression) {
+this.visit<object>(castExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.CollateExpression collateExpression) {
+this.visit<object>(collateExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ConnectByPriorOperator connectByPriorOperator) {
+this.visit<object>(connectByPriorOperator, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ConnectByRootOperator connectByRootOperator) {
+this.visit<object>(connectByRootOperator, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.DateTimeLiteralExpression dateTimeLiteralExpression) {
+this.visit<object>(dateTimeLiteralExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.DateValue dateValue) {
+this.visit<object>(dateValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.DoubleValue doubleValue) {
+this.visit<object>(doubleValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ExtractExpression extractExpression) {
+this.visit<object>(extractExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Function function) {
+this.visit<object>(function, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.HexValue hexValue) {
+this.visit<object>(hexValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.HighExpression highExpression) {
+this.visit<object>(highExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.IntervalExpression intervalExpression) {
+this.visit<object>(intervalExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Inverse inverse) {
+this.visit<object>(inverse, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.JdbcNamedParameter jdbcNamedParameter) {
+this.visit<object>(jdbcNamedParameter, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.JdbcParameter jdbcParameter) {
+this.visit<object>(jdbcParameter, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.JsonAggregateFunction jsonAggregateFunction) {
+this.visit<object>(jsonAggregateFunction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.JsonExpression jsonExpression) {
+this.visit<object>(jsonExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.JsonFunction jsonFunction) {
+this.visit<object>(jsonFunction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.KeepExpression keepExpression) {
+this.visit<object>(keepExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.LambdaExpression lambdaExpression) {
+this.visit<object>(lambdaExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.LongValue longValue) {
+this.visit<object>(longValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.LowExpression lowExpression) {
+this.visit<object>(lowExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.MySQLGroupConcat groupConcat) {
+this.visit<object>(groupConcat, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.NextValExpression nextValExpression) {
+this.visit<object>(nextValExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.NotExpression notExpression) {
+this.visit<object>(notExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.NullValue nullValue) {
+this.visit<object>(nullValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.NumericBind numericBind) {
+this.visit<object>(numericBind, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.OracleHierarchicalExpression hierarchicalExpression) {
+this.visit<object>(hierarchicalExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.OracleHint hint) {
+this.visit<object>(hint, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.OracleNamedFunctionParameter oracleNamedFunctionParameter) {
+this.visit<object>(oracleNamedFunctionParameter, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.OverlapsCondition overlapsCondition) {
+this.visit<object>(overlapsCondition, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.RangeExpression rangeExpression) {
+this.visit<object>(rangeExpression, (object)default!);
+}
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.RowConstructor<TWildcard0_0> rowConstructor) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
+this.visit<object, TWildcard0_0>(rowConstructor, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.RowGetExpression rowGetExpression) {
+this.visit<object>(rowGetExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.SignedExpression signedExpression) {
+this.visit<object>(signedExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.StringValue stringValue) {
+this.visit<object>(stringValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.StructType structType) {
+this.visit<object>(structType, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TimeKeyExpression timeKeyExpression) {
+this.visit<object>(timeKeyExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TimeValue timeValue) {
+this.visit<object>(timeValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TimestampValue timestampValue) {
+this.visit<object>(timestampValue, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TimezoneExpression timezoneExpression) {
+this.visit<object>(timezoneExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TranscodingFunction transcodingFunction) {
+this.visit<object>(transcodingFunction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.TrimFunction trimFunction) {
+this.visit<object>(trimFunction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.UserVariable userVariable) {
+this.visit<object>(userVariable, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.VariableAssignment variableAssignment) {
+this.visit<object>(variableAssignment, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.WhenClause whenClause) {
+this.visit<object>(whenClause, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.XMLSerializeExpr xmlSerializeExpr) {
+this.visit<object>(xmlSerializeExpr, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition addition) {
+this.visit<object>(addition, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd bitwiseAnd) {
+this.visit<object>(bitwiseAnd, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift bitwiseLeftShift) {
+this.visit<object>(bitwiseLeftShift, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr bitwiseOr) {
+this.visit<object>(bitwiseOr, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift bitwiseRightShift) {
+this.visit<object>(bitwiseRightShift, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor bitwiseXor) {
+this.visit<object>(bitwiseXor, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat concat) {
+this.visit<object>(concat, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division division) {
+this.visit<object>(division, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision integerDivision) {
+this.visit<object>(integerDivision, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo modulo) {
+this.visit<object>(modulo, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication multiplication) {
+this.visit<object>(multiplication, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction subtraction) {
+this.visit<object>(subtraction, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.AndExpression andExpression) {
+this.visit<object>(andExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.OrExpression orExpression) {
+this.visit<object>(orExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression xorExpression) {
+this.visit<object>(xorExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Between between) {
+this.visit<object>(between, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ContainedBy containedBy) {
+this.visit<object>(containedBy, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Contains contains) {
+this.visit<object>(contains, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.DoubleAnd doubleAnd) {
+this.visit<object>(doubleAnd, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo equalsTo) {
+this.visit<object>(equalsTo, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExcludesExpression excludesExpression) {
+this.visit<object>(excludesExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExistsExpression existsExpression) {
+this.visit<object>(existsExpression, (object)default!);
+}
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<TWildcard0_0> expressionList) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
+this.visit<object, TWildcard0_0>(expressionList, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.FullTextSearch fullTextSearch) {
+this.visit<object>(fullTextSearch, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GeometryDistance geometryDistance) {
+this.visit<object>(geometryDistance, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThan greaterThan) {
+this.visit<object>(greaterThan, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThanEquals greaterThanEquals) {
+this.visit<object>(greaterThanEquals, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.InExpression inExpression) {
+this.visit<object>(inExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IncludesExpression includesExpression) {
+this.visit<object>(includesExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsBooleanExpression isBooleanExpression) {
+this.visit<object>(isBooleanExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsDistinctExpression isDistinctExpression) {
+this.visit<object>(isDistinctExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsNullExpression isNullExpression) {
+this.visit<object>(isNullExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsUnknownExpression isUnknownExpression) {
+this.visit<object>(isUnknownExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.JsonOperator jsonOperator) {
+this.visit<object>(jsonOperator, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression likeExpression) {
+this.visit<object>(likeExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches matches) {
+this.visit<object>(matches, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MemberOfExpression memberOfExpression) {
+this.visit<object>(memberOfExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThan minorThan) {
+this.visit<object>(minorThan, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals minorThanEquals) {
+this.visit<object>(minorThanEquals, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo notEqualsTo) {
+this.visit<object>(notEqualsTo, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Plus plus) {
+this.visit<object>(plus, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.PriorTo priorTo) {
+this.visit<object>(priorTo, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator regExpMatchOperator) {
+this.visit<object>(regExpMatchOperator, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression similarToExpression) {
+this.visit<object>(similarToExpression, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLLeftJoin tsqlLeftJoin) {
+this.visit<object>(tsqlLeftJoin, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLRightJoin tsqlRightJoin) {
+this.visit<object>(tsqlRightJoin, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Schema.Column column) {
+this.visit<object>(column, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Delete.ParenthesedDelete parenthesedDelete) {
+this.visit<object>(parenthesedDelete, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Insert.ParenthesedInsert parenthesedInsert) {
+this.visit<object>(parenthesedInsert, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.AllColumns allColumns) {
+this.visit<object>(allColumns, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.AllTableColumns allTableColumns) {
+this.visit<object>(allTableColumns, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Update.ParenthesedUpdate parenthesedUpdate) {
+this.visit<object>(parenthesedUpdate, (object)default!);
+}
 }

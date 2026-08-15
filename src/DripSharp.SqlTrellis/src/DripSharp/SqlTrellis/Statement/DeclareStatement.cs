@@ -198,4 +198,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.Expression getDefaultExpr
 return this.defaultExpr;
 }
 }
+
+public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

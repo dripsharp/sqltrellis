@@ -32,4 +32,8 @@ this.expression = expression;
 public override string ToString() {
 return global::DripSharp.Runtime.JavaCompat.Concat("LOW ", global::DripSharp.Runtime.JavaCompat.StringValueOf(this.expression));
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

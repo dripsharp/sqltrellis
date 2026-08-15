@@ -23,11 +23,11 @@ public override string getStringExpression() {
 return "&";
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd)(base.withRightExpression(arg0)!);
 }
 }

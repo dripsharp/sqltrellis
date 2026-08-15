@@ -17,7 +17,7 @@ private bool not = false;
 
 private global::DripSharp.SqlTrellis.Expression.Expression rightExpression = null!;
 
-private int oldOracleJoinSyntax = global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_JOIN;
+private int oldOracleJoinSyntax = global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_JOIN;
 
 public InExpression() {}
 
@@ -80,7 +80,7 @@ return expressionVisitor.visit(this, context);
 }
 
 private string getLeftExpressionString() {
-return global::DripSharp.Runtime.JavaCompat.Concat(this.leftExpression, ((this.oldOracleJoinSyntax == global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.ORACLE_JOIN_RIGHT) ? "(+)" : ""));
+return global::DripSharp.Runtime.JavaCompat.Concat(this.leftExpression, ((this.oldOracleJoinSyntax == global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.ORACLE_JOIN_RIGHT) ? "(+)" : ""));
 }
 
 public override string ToString() {
@@ -99,11 +99,11 @@ return statementBuilder.ToString();
 }
 
 public virtual int getOraclePriorPosition() {
-return global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_PRIOR;
+return global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_PRIOR;
 }
 
 public virtual void setOraclePriorPosition(int priorPosition) {
-if ((priorPosition != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_PRIOR)) {
+if ((priorPosition != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_PRIOR)) {
 throw new global::System.ArgumentException("unexpected prior for oracle found");
 }
 }
@@ -141,7 +141,11 @@ public virtual E getRightExpression<E>(global::System.Type type) where E : globa
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getRightExpression());
 }
 
-global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.withOldOracleJoinSyntax(int oldOracleJoinSyntax) => this.withOldOracleJoinSyntax(oldOracleJoinSyntax);
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 
-global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.withOraclePriorPosition(int priorPosition) => this.withOraclePriorPosition(priorPosition);
+global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.withOldOracleJoinSyntax(int oldOracleJoinSyntax) => (global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax)(this.withOldOracleJoinSyntax(oldOracleJoinSyntax));
+
+global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.withOraclePriorPosition(int priorPosition) => (global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax)(this.withOraclePriorPosition(priorPosition));
 }

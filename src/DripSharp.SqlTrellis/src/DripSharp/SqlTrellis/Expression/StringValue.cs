@@ -94,4 +94,8 @@ return (global::DripSharp.Runtime.JavaCompat.Equals(this.value, that.value) && g
 public override int GetHashCode() {
 return global::DripSharp.Runtime.JavaCompat.Hash(this.value, this.prefix);
 }
+
+public void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

@@ -92,11 +92,11 @@ return this.getIndex(global::DripSharp.SqlTrellis.Schema.Table.DATABASE_IDX);
 }
 
 public virtual string getUnquotedCatalogName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.getDatabaseName());
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.getDatabaseName());
 }
 
 public virtual string getUnquotedDatabaseName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.getDatabaseName());
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.getDatabaseName());
 }
 
 public virtual void setDatabase(global::DripSharp.SqlTrellis.Schema.Database database) {
@@ -121,7 +121,7 @@ return this.getIndex(global::DripSharp.SqlTrellis.Schema.Table.SCHEMA_IDX);
 }
 
 public virtual string getUnquotedSchemaName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.getSchemaName());
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.getSchemaName());
 }
 
 public virtual global::DripSharp.SqlTrellis.Schema.Table setSchemaName(string schemaName) {
@@ -147,9 +147,9 @@ return name;
 
 public virtual void setName(string name) {
 bool splitNamesOnDelimiter = ((global::DripSharp.Runtime.JavaCompat.GetProperty("SPLIT_NAMES_ON_DELIMITER") == default!) || !global::DripSharp.Runtime.JavaCompat.CollectionContains(global::DripSharp.Runtime.JavaCompat.ListOf<string>("0", "N", "n", "FALSE", "false", "OFF", "off"), global::DripSharp.Runtime.JavaCompat.GetProperty("SPLIT_NAMES_ON_DELIMITER")));
-if (((global::DripSharp.SqlTrellis.Schema.MultiPartName.isQuoted(name) && global::DripSharp.Runtime.JavaCompat.StringContains(name, ".")) && splitNamesOnDelimiter)) {
+if (((global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.isQuoted(name) && global::DripSharp.Runtime.JavaCompat.StringContains(name, ".")) && splitNamesOnDelimiter)) {
 (this.partItems).Clear();
-foreach (string unquotedIdentifier in global::DripSharp.Runtime.JavaCompat.StringSplit(global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(name), "\\.", 0)) {
+foreach (string unquotedIdentifier in global::DripSharp.Runtime.JavaCompat.StringSplit(global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(name), "\\.", 0)) {
 global::DripSharp.Runtime.JavaCompat.Add(this.partItems, global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("\"", unquotedIdentifier), "\""));
 }
 global::DripSharp.Runtime.JavaCompat.Reverse(this.partItems);
@@ -221,7 +221,7 @@ return fqn.ToString();
 }
 
 public virtual string getUnquotedName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.getName());
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.getName());
 }
 
 public virtual T accept<T, S>(global::DripSharp.SqlTrellis.Statement.Select.FromItemVisitor<T> fromItemVisitor, S context) {
@@ -330,5 +330,35 @@ public virtual global::System.Collections.Generic.IList<string> getNamePartDelim
 return this.partDelimiters;
 }
 
-global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.setSampleClause(global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause) => this.setSampleClause(sampleClause);
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.FromItemVisitor<TWildcard0_0> fromItemVisitor) {
+this.accept<TWildcard0_0, object>(fromItemVisitor, (object)default!);
+}
+
+public virtual global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias) {
+return ((global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this)).appendTo(builder, alias, (global::DripSharp.SqlTrellis.Statement.Select.SampleClause)default!, (global::DripSharp.SqlTrellis.Statement.Select.Pivot)default!, (global::DripSharp.SqlTrellis.Statement.Select.UnPivot)default!);
+}
+
+public virtual global::System.Text.StringBuilder appendTo(global::System.Text.StringBuilder builder, global::DripSharp.SqlTrellis.Expression.Alias alias, global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause, global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot, global::DripSharp.SqlTrellis.Statement.Select.UnPivot unPivot) {
+if ((alias != default!)) {
+builder.Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(alias));
+}
+if ((sampleClause != default!)) {
+builder.Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(sampleClause));
+}
+if ((pivot != default!)) {
+builder.Append(" ").Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(pivot));
+}
+if ((unPivot != default!)) {
+builder.Append(" ").Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(unPivot));
+}
+return builder;
+}
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.setSampleClause(global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.setSampleClause(sampleClause));
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.withAlias(alias));
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.withPivot(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.withPivot(pivot));
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.withUnPivot(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.withUnPivot(unpivot));
 }

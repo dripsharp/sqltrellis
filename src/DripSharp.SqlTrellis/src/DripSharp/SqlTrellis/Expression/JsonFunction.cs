@@ -232,4 +232,8 @@ public override string ToString() {
 global::System.Text.StringBuilder builder = new global::System.Text.StringBuilder();
 return this.append(builder).ToString();
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

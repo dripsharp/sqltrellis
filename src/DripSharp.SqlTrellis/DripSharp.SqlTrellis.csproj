@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -34,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src/**/*.cs" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Memory" Version="4.6.3" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.0" />
     <SourceRoot Include="$(MSBuildProjectDirectory)/" RepositoryUrl="https://github.com/dripsharp/sqltrellis.git" SourceControl="git" RevisionId="$(RepositoryCommit)" SourceLinkUrl="https://raw.githubusercontent.com/dripsharp/sqltrellis/$(RepositoryCommit)/src/DripSharp.SqlTrellis/*" />
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>DripSharp.SqlTrellis.Tests</_Parameter1>

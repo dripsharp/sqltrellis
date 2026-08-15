@@ -100,7 +100,7 @@ return fqn.ToString();
 }
 
 public virtual string getUnquotedName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(global::DripSharp.Runtime.JavaCompat.ListGet(this.partItems, global::DripSharp.SqlTrellis.Schema.Synonym.NAME_IDX));
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(global::DripSharp.Runtime.JavaCompat.ListGet(this.partItems, global::DripSharp.SqlTrellis.Schema.Synonym.NAME_IDX));
 }
 
 public override string ToString() {

@@ -12,4 +12,8 @@ public class OrderByVisitorAdapter<T> : global::DripSharp.SqlTrellis.Statement.S
 public virtual T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy, S context) {
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy) {
+this.visit<object>(orderBy, (object)default!);
+}
 }

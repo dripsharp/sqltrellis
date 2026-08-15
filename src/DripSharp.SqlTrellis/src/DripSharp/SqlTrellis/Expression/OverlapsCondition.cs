@@ -33,4 +33,8 @@ return expressionVisitor.visit(this, context);
 public override string ToString() {
 return global::DripSharp.Runtime.JavaCompat.JavaStringFormat("%s OVERLAPS %s", this.left.ToString(), this.right.ToString());
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

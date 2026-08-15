@@ -45,4 +45,8 @@ return builder;
 public override string ToString() {
 return this.appendTo(new global::System.Text.StringBuilder()).ToString();
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

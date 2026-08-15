@@ -11,20 +11,11 @@ namespace DripSharp.SqlTrellis.Statement;
 public interface ParenthesedStatement : global::DripSharp.SqlTrellis.Statement.Statement {
 public new T accept<T, S>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<T> statementVisitor, S context);
 
-public new void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
-this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
-}
+public new void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor);
 
 public global::DripSharp.SqlTrellis.Expression.Alias getAlias();
 
 public void setAlias(global::DripSharp.SqlTrellis.Expression.Alias alias);
 
-public global::DripSharp.SqlTrellis.Statement.ParenthesedStatement withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
-this.setAlias(alias);
-return this;
-}
-
-T global::DripSharp.SqlTrellis.Statement.Statement.accept<T, S>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<T> statementVisitor, S context) => (this.accept(statementVisitor, context));
-
-void global::DripSharp.SqlTrellis.Statement.Statement.accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) => this.accept(statementVisitor);
+public global::DripSharp.SqlTrellis.Statement.ParenthesedStatement withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias);
 }

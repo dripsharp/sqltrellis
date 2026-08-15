@@ -8,7 +8,9 @@
 #nullable disable
 namespace DripSharp.SqlTrellis.Parser;
 
-public interface CCJSqlParserConstants {
+public interface CCJSqlParserConstants {}
+
+public static class CCJSqlParserConstantsStatics {
 public const int EOF = 0;
 
 public const int WHITESPACE = 1;

@@ -43,4 +43,8 @@ return global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.Jav
 public virtual T accept<T, S>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor, S context) {
 return expressionVisitor.visit(this, context);
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

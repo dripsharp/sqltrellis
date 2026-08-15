@@ -93,4 +93,6 @@ return default!;
 public override global::DripSharp.SqlTrellis.Statement.Select.FromItem setSampleClause(global::DripSharp.SqlTrellis.Statement.Select.SampleClause sampleClause) {
 return default!;
 }
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.withAlias(alias));
 }

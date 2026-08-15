@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface OrderByVisitor<T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy) {
-this.visit<object>(orderBy, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.OrderByElement orderBy);
 }

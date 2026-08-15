@@ -102,7 +102,7 @@ return data;
 }
 
 public override string ToString() {
-return global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.jjtNodeName[this.id];
+return global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.jjtNodeName[this.id];
 }
 
 public virtual string toString(string prefix) {

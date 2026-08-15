@@ -29,7 +29,7 @@ return this.name;
 }
 
 public virtual string getUnquotedName() {
-return global::DripSharp.SqlTrellis.Schema.MultiPartName.unquote(this.name);
+return global::DripSharp.SqlTrellis.Schema.MultiPartNameStatics.unquote(this.name);
 }
 
 public virtual void setName(string name) {

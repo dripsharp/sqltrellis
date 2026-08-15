@@ -438,4 +438,8 @@ return this.funcOrderBy;
 public virtual void setFuncOrderBy(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.OrderByElement> funcOrderBy) {
 this.funcOrderBy = funcOrderBy;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

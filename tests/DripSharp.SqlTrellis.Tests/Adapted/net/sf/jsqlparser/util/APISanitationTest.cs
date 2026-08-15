@@ -144,7 +144,7 @@ while ((declaringClazz.DeclaringType != default!)) {
 declaringClazz = declaringClazz.DeclaringType;
 }
 string pureDeclaringClassName = (declaringClazz.FullName ?? declaringClazz.Name);
-global::System.IO.FileInfo file = global::DripSharp.SqlTrellis.Tests.Support.TestFile(global::DripSharp.Runtime.JavaCompat.Concat("src/main/java/", (pureDeclaringClassName.Replace(".", "/", global::System.StringComparison.Ordinal)) + ".java"));
+global::System.IO.FileInfo file = global::DripSharp.SqlTrellis.Tests.Support.TestFile(global::DripSharp.Runtime.JavaCompat.Concat("src/main/java/", (global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(pureDeclaringClassName, ".", "/")) + ".java"));
 int position = 1;
 global::System.Text.RegularExpressions.Regex pattern = global::DripSharp.Runtime.JavaCompat.CompileRegex(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("\\s", field.FieldType.Name), "(<\\w*>)?(\\s*\\w*,?)*\\s*\\W"), 8);
 try {

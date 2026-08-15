@@ -36,43 +36,43 @@ public virtual E getExpression<E>(global::System.Type type) where E : global::Dr
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getExpression());
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withName(global::System.Collections.Generic.IList<string> name) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(global::System.Collections.Generic.IList<string> name) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withName(name)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withType(string type) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withType(string type) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withType(type)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withUsing(string @using) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withUsing(string @using) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withUsing(@using)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withColumnsNames(global::System.Collections.Generic.IList<string> list) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumnsNames(global::System.Collections.Generic.IList<string> list) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withColumnsNames(list)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withColumns(columns)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.addColumns(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.addColumns(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withIndexSpec(idxSpec)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withName(string name) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(string name) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withName(name)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint withIndexKeyword(string indexKeyword) {
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexKeyword(string indexKeyword) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.ExcludeConstraint)(base.withIndexKeyword(indexKeyword)!);
 }
 }

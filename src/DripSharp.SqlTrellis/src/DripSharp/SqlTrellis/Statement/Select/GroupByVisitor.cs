@@ -11,7 +11,5 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface GroupByVisitor<T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.GroupByElement groupBy, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.GroupByElement groupBy) {
-this.visit<object>(groupBy, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.GroupByElement groupBy);
 }

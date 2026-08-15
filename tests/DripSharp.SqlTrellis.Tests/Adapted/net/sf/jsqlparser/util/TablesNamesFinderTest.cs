@@ -417,7 +417,7 @@ return base.visit(table, context);
 string originTableName = table.getName();
 table.setName(global::DripSharp.Runtime.JavaCompat.Concat(this.__capture_1, originTableName));
 if (global::DripSharp.Runtime.JavaCompat.StringStartsWith(originTableName, "`")) {
-table.setName(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("`", this.__capture_1), originTableName.Replace("`", "", global::System.StringComparison.Ordinal)), "`"));
+table.setName(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("`", this.__capture_1), global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(originTableName, "`", "")), "`"));
 }
 return base.visit(table, context);
 }

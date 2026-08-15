@@ -11,627 +11,421 @@ namespace DripSharp.SqlTrellis.Expression;
 public interface ExpressionVisitor<out T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift bitwiseRightShift, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift bitwiseRightShift) {
-this.visit<object>(bitwiseRightShift, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift bitwiseRightShift);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift bitwiseLeftShift, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift bitwiseLeftShift) {
-this.visit<object>(bitwiseLeftShift, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift bitwiseLeftShift);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.NullValue nullValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.NullValue nullValue) {
-this.visit<object>(nullValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.NullValue nullValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Function function, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Function function) {
-this.visit<object>(function, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Function function);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.SignedExpression signedExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.SignedExpression signedExpression) {
-this.visit<object>(signedExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.SignedExpression signedExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.JdbcParameter jdbcParameter, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.JdbcParameter jdbcParameter) {
-this.visit<object>(jdbcParameter, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.JdbcParameter jdbcParameter);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.JdbcNamedParameter jdbcNamedParameter, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.JdbcNamedParameter jdbcNamedParameter) {
-this.visit<object>(jdbcNamedParameter, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.JdbcNamedParameter jdbcNamedParameter);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.DoubleValue doubleValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.DoubleValue doubleValue) {
-this.visit<object>(doubleValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.DoubleValue doubleValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.LongValue longValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.LongValue longValue) {
-this.visit<object>(longValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.LongValue longValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.HexValue hexValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.HexValue hexValue) {
-this.visit<object>(hexValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.HexValue hexValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.DateValue dateValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.DateValue dateValue) {
-this.visit<object>(dateValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.DateValue dateValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TimeValue timeValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TimeValue timeValue) {
-this.visit<object>(timeValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TimeValue timeValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TimestampValue timestampValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TimestampValue timestampValue) {
-this.visit<object>(timestampValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TimestampValue timestampValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.StringValue stringValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.StringValue stringValue) {
-this.visit<object>(stringValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.StringValue stringValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.BooleanValue booleanValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.BooleanValue booleanValue) {
-this.visit<object>(booleanValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.BooleanValue booleanValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition addition, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition addition) {
-this.visit<object>(addition, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition addition);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division division, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division division) {
-this.visit<object>(division, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division division);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision integerDivision, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision integerDivision) {
-this.visit<object>(integerDivision, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision integerDivision);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication multiplication, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication multiplication) {
-this.visit<object>(multiplication, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication multiplication);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction subtraction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction subtraction) {
-this.visit<object>(subtraction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction subtraction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.AndExpression andExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.AndExpression andExpression) {
-this.visit<object>(andExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.AndExpression andExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.OrExpression orExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.OrExpression orExpression) {
-this.visit<object>(orExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.OrExpression orExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression xorExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression xorExpression) {
-this.visit<object>(xorExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression xorExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Between between, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Between between) {
-this.visit<object>(between, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Between between);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.OverlapsCondition overlapsCondition, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.OverlapsCondition overlapsCondition) {
-this.visit<object>(overlapsCondition, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.OverlapsCondition overlapsCondition);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo equalsTo, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo equalsTo) {
-this.visit<object>(equalsTo, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.EqualsTo equalsTo);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThan greaterThan, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThan greaterThan) {
-this.visit<object>(greaterThan, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThan greaterThan);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThanEquals greaterThanEquals, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThanEquals greaterThanEquals) {
-this.visit<object>(greaterThanEquals, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GreaterThanEquals greaterThanEquals);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.InExpression inExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.InExpression inExpression) {
-this.visit<object>(inExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.InExpression inExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IncludesExpression includesExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IncludesExpression includesExpression) {
-this.visit<object>(includesExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IncludesExpression includesExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExcludesExpression excludesExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExcludesExpression excludesExpression) {
-this.visit<object>(excludesExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExcludesExpression excludesExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.FullTextSearch fullTextSearch, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.FullTextSearch fullTextSearch) {
-this.visit<object>(fullTextSearch, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.FullTextSearch fullTextSearch);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsNullExpression isNullExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsNullExpression isNullExpression) {
-this.visit<object>(isNullExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsNullExpression isNullExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsBooleanExpression isBooleanExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsBooleanExpression isBooleanExpression) {
-this.visit<object>(isBooleanExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsBooleanExpression isBooleanExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsUnknownExpression isUnknownExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsUnknownExpression isUnknownExpression) {
-this.visit<object>(isUnknownExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsUnknownExpression isUnknownExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression likeExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression likeExpression) {
-this.visit<object>(likeExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression likeExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThan minorThan, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThan minorThan) {
-this.visit<object>(minorThan, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThan minorThan);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals minorThanEquals, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals minorThanEquals) {
-this.visit<object>(minorThanEquals, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals minorThanEquals);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo notEqualsTo, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo notEqualsTo) {
-this.visit<object>(notEqualsTo, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.NotEqualsTo notEqualsTo);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.DoubleAnd doubleAnd, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.DoubleAnd doubleAnd) {
-this.visit<object>(doubleAnd, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.DoubleAnd doubleAnd);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Contains contains, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Contains contains) {
-this.visit<object>(contains, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Contains contains);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ContainedBy containedBy, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ContainedBy containedBy) {
-this.visit<object>(containedBy, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ContainedBy containedBy);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect select, S context);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Schema.Column column, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Schema.Column column) {
-this.visit<object>(column, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Schema.Column column);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.CaseExpression caseExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.CaseExpression caseExpression) {
-this.visit<object>(caseExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.CaseExpression caseExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.WhenClause whenClause, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.WhenClause whenClause) {
-this.visit<object>(whenClause, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.WhenClause whenClause);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExistsExpression existsExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExistsExpression existsExpression) {
-this.visit<object>(existsExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExistsExpression existsExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MemberOfExpression memberOfExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MemberOfExpression memberOfExpression) {
-this.visit<object>(memberOfExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.MemberOfExpression memberOfExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.AnyComparisonExpression anyComparisonExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.AnyComparisonExpression anyComparisonExpression) {
-this.visit<object>(anyComparisonExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.AnyComparisonExpression anyComparisonExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat concat, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat concat) {
-this.visit<object>(concat, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat concat);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches matches, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches matches) {
-this.visit<object>(matches, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Matches matches);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd bitwiseAnd, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd bitwiseAnd) {
-this.visit<object>(bitwiseAnd, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd bitwiseAnd);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr bitwiseOr, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr bitwiseOr) {
-this.visit<object>(bitwiseOr, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr bitwiseOr);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor bitwiseXor, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor bitwiseXor) {
-this.visit<object>(bitwiseXor, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor bitwiseXor);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.CastExpression castExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.CastExpression castExpression) {
-this.visit<object>(castExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.CastExpression castExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo modulo, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo modulo) {
-this.visit<object>(modulo, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo modulo);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.AnalyticExpression analyticExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.AnalyticExpression analyticExpression) {
-this.visit<object>(analyticExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.AnalyticExpression analyticExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.ExtractExpression extractExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.ExtractExpression extractExpression) {
-this.visit<object>(extractExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.ExtractExpression extractExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.IntervalExpression intervalExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.IntervalExpression intervalExpression) {
-this.visit<object>(intervalExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.IntervalExpression intervalExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.OracleHierarchicalExpression hierarchicalExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.OracleHierarchicalExpression hierarchicalExpression) {
-this.visit<object>(hierarchicalExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.OracleHierarchicalExpression hierarchicalExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator regExpMatchOperator, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator regExpMatchOperator) {
-this.visit<object>(regExpMatchOperator, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator regExpMatchOperator);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.JsonExpression jsonExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.JsonExpression jsonExpression) {
-this.visit<object>(jsonExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.JsonExpression jsonExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.JsonOperator jsonOperator, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.JsonOperator jsonOperator) {
-this.visit<object>(jsonOperator, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.JsonOperator jsonOperator);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.UserVariable userVariable, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.UserVariable userVariable) {
-this.visit<object>(userVariable, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.UserVariable userVariable);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.NumericBind numericBind, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.NumericBind numericBind) {
-this.visit<object>(numericBind, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.NumericBind numericBind);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.KeepExpression keepExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.KeepExpression keepExpression) {
-this.visit<object>(keepExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.KeepExpression keepExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.MySQLGroupConcat groupConcat, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.MySQLGroupConcat groupConcat) {
-this.visit<object>(groupConcat, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.MySQLGroupConcat groupConcat);
 
 public T visit<S, TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<TWildcard0_0> expressionList, S context) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 
-public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<TWildcard0_0> expressionList) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
-this.visit<object, TWildcard0_0>(expressionList, (object)default!);
-}
+public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<TWildcard0_0> expressionList) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 
 public T visit<S, TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.RowConstructor<TWildcard0_0> rowConstructor, S context) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 
-public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.RowConstructor<TWildcard0_0> rowConstructor) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
-this.visit<object, TWildcard0_0>(rowConstructor, (object)default!);
-}
+public void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.RowConstructor<TWildcard0_0> rowConstructor) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression;
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.RowGetExpression rowGetExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.RowGetExpression rowGetExpression) {
-this.visit<object>(rowGetExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.RowGetExpression rowGetExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.OracleHint hint, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.OracleHint hint) {
-this.visit<object>(hint, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.OracleHint hint);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TimeKeyExpression timeKeyExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TimeKeyExpression timeKeyExpression) {
-this.visit<object>(timeKeyExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TimeKeyExpression timeKeyExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.DateTimeLiteralExpression dateTimeLiteralExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.DateTimeLiteralExpression dateTimeLiteralExpression) {
-this.visit<object>(dateTimeLiteralExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.DateTimeLiteralExpression dateTimeLiteralExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.NotExpression notExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.NotExpression notExpression) {
-this.visit<object>(notExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.NotExpression notExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.NextValExpression nextValExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.NextValExpression nextValExpression) {
-this.visit<object>(nextValExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.NextValExpression nextValExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.CollateExpression collateExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.CollateExpression collateExpression) {
-this.visit<object>(collateExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.CollateExpression collateExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression similarToExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression similarToExpression) {
-this.visit<object>(similarToExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.SimilarToExpression similarToExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.ArrayExpression arrayExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.ArrayExpression arrayExpression) {
-this.visit<object>(arrayExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.ArrayExpression arrayExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.ArrayConstructor arrayConstructor, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.ArrayConstructor arrayConstructor) {
-this.visit<object>(arrayConstructor, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.ArrayConstructor arrayConstructor);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.VariableAssignment variableAssignment, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.VariableAssignment variableAssignment) {
-this.visit<object>(variableAssignment, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.VariableAssignment variableAssignment);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.XMLSerializeExpr xmlSerializeExpr, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.XMLSerializeExpr xmlSerializeExpr) {
-this.visit<object>(xmlSerializeExpr, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.XMLSerializeExpr xmlSerializeExpr);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TimezoneExpression timezoneExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TimezoneExpression timezoneExpression) {
-this.visit<object>(timezoneExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TimezoneExpression timezoneExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.JsonAggregateFunction jsonAggregateFunction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.JsonAggregateFunction jsonAggregateFunction) {
-this.visit<object>(jsonAggregateFunction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.JsonAggregateFunction jsonAggregateFunction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.JsonFunction jsonFunction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.JsonFunction jsonFunction) {
-this.visit<object>(jsonFunction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.JsonFunction jsonFunction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.ConnectByRootOperator connectByRootOperator, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.ConnectByRootOperator connectByRootOperator) {
-this.visit<object>(connectByRootOperator, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.ConnectByRootOperator connectByRootOperator);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.ConnectByPriorOperator connectByPriorOperator, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.ConnectByPriorOperator connectByPriorOperator) {
-this.visit<object>(connectByPriorOperator, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.ConnectByPriorOperator connectByPriorOperator);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.OracleNamedFunctionParameter oracleNamedFunctionParameter, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.OracleNamedFunctionParameter oracleNamedFunctionParameter) {
-this.visit<object>(oracleNamedFunctionParameter, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.OracleNamedFunctionParameter oracleNamedFunctionParameter);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.AllColumns allColumns, S context);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.FunctionAllColumns functionColumns, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.AllColumns allColumns) {
-this.visit<object>(allColumns, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.AllColumns allColumns);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.AllTableColumns allTableColumns, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.AllTableColumns allTableColumns) {
-this.visit<object>(allTableColumns, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.AllTableColumns allTableColumns);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.AllValue allValue, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.AllValue allValue) {
-this.visit<object>(allValue, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.AllValue allValue);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsDistinctExpression isDistinctExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsDistinctExpression isDistinctExpression) {
-this.visit<object>(isDistinctExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.IsDistinctExpression isDistinctExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GeometryDistance geometryDistance, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GeometryDistance geometryDistance) {
-this.visit<object>(geometryDistance, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.GeometryDistance geometryDistance);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.Select select, S context);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TranscodingFunction transcodingFunction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TranscodingFunction transcodingFunction) {
-this.visit<object>(transcodingFunction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TranscodingFunction transcodingFunction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.TrimFunction trimFunction, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.TrimFunction trimFunction) {
-this.visit<object>(trimFunction, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.TrimFunction trimFunction);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.RangeExpression rangeExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.RangeExpression rangeExpression) {
-this.visit<object>(rangeExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.RangeExpression rangeExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLLeftJoin tsqlLeftJoin, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLLeftJoin tsqlLeftJoin) {
-this.visit<object>(tsqlLeftJoin, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLLeftJoin tsqlLeftJoin);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLRightJoin tsqlRightJoin, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLRightJoin tsqlRightJoin) {
-this.visit<object>(tsqlRightJoin, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.TSQLRightJoin tsqlRightJoin);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.StructType structType, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.StructType structType) {
-this.visit<object>(structType, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.StructType structType);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.LambdaExpression lambdaExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.LambdaExpression lambdaExpression) {
-this.visit<object>(lambdaExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.LambdaExpression lambdaExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.HighExpression highExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.HighExpression highExpression) {
-this.visit<object>(highExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.HighExpression highExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.LowExpression lowExpression, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.LowExpression lowExpression) {
-this.visit<object>(lowExpression, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.LowExpression lowExpression);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Plus plus, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Plus plus) {
-this.visit<object>(plus, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.Plus plus);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.PriorTo priorTo, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.PriorTo priorTo) {
-this.visit<object>(priorTo, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Operators.Relational.PriorTo priorTo);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Inverse inverse, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Expression.Inverse inverse) {
-this.visit<object>(inverse, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Expression.Inverse inverse);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.CosineSimilarity cosineSimilarity, S context);
 

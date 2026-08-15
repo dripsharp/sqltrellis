@@ -11,7 +11,7 @@ string sqlStr = global::DripSharp.Runtime.JavaCompat.Concat("select ", functionS
 global::DripSharp.SqlTrellis.Test.TestUtils.assertSqlCanBeParsedAndDeparsed(sqlStr, true);
 global::DripSharp.SqlTrellis.Expression.TrimFunction trimFunction = new global::DripSharp.SqlTrellis.Expression.TrimFunction().withTrimSpecification(global::DripSharp.SqlTrellis.Expression.TrimFunction.TrimSpecification.BOTH).withExpression(new global::DripSharp.SqlTrellis.Expression.StringValue("x")).withUsingFromKeyword(true).withFromExpression(new global::DripSharp.SqlTrellis.Expression.StringValue("xTomxx"));
 global::DripSharp.Testing.JavaAssertions.Equal(functionStr, trimFunction.ToString(), null);
-global::DripSharp.Testing.JavaAssertions.Equal(functionStr.Replace(" FROM", ",", global::System.StringComparison.Ordinal), trimFunction.withUsingFromKeyword(false).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.Runtime.JavaCompat.ReplaceOrdinal(functionStr, " FROM", ","), trimFunction.withUsingFromKeyword(false).ToString(), null);
 sqlStr = "select trim(BOTH from unnest(string_to_array(initcap(bbbbb),';')))";
 global::DripSharp.SqlTrellis.Test.TestUtils.assertSqlCanBeParsedAndDeparsed(sqlStr, true);
 }

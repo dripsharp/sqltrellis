@@ -43,4 +43,32 @@ return lateralSubSelect.getSelect().accept((global::DripSharp.SqlTrellis.Stateme
 public virtual T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement, S context) {
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect lateralSubSelect) {
+this.visit<object>(lateralSubSelect, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect parenthesedSelect) {
+this.visit<object>(parenthesedSelect, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.PlainSelect plainSelect) {
+this.visit<object>(plainSelect, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.SetOperationList setOpList) {
+this.visit<object>(setOpList, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.TableStatement tableStatement) {
+this.visit<object>(tableStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.Values values) {
+this.visit<object>(values, (object)default!);
+}
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.WithItem<TWildcard0_0> withItem) where TWildcard0_0 : global::DripSharp.SqlTrellis.Statement.ParenthesedStatement {
+this.visit<object, TWildcard0_0>(withItem, (object)default!);
+}
 }

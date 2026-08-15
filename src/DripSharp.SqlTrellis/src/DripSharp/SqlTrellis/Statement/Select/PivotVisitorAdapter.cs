@@ -20,4 +20,16 @@ return default!;
 public virtual T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot, S context) {
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot) {
+this.visit<object>(pivot, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.PivotXml pivotXml) {
+this.visit<object>(pivotXml, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot) {
+this.visit<object>(unpivot, (object)default!);
+}
 }

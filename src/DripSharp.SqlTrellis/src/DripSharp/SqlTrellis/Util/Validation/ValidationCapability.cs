@@ -9,19 +9,13 @@
 namespace DripSharp.SqlTrellis.Util.Validation;
 
 public interface ValidationCapability {
-public string getName() {
-return ((object)(this)).GetType().Name;
-}
+public string getName();
 
 public void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer);
 
-public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
-return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
-}
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message);
 
-public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
-return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
-}
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th);
 }
 
 public sealed class __ValidationCapabilityFunctionalAdapter : global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability {
@@ -33,5 +27,17 @@ this.implementation = implementation;
 
 public void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
 this.implementation(context, errorConsumer);
+}
+
+public string getName() {
+return ((object)(this)).GetType().Name;
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
 }
 }

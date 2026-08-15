@@ -83,7 +83,7 @@ public override void setAlias(global::DripSharp.SqlTrellis.Expression.Alias alia
 this.alias = alias;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
+public override global::DripSharp.SqlTrellis.Statement.Select.Select withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
 this.setAlias(alias);
 return this;
 }
@@ -143,7 +143,7 @@ this.setSelect(selectBody);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect withOrderByElements(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.OrderByElement> orderByElements) {
+public override global::DripSharp.SqlTrellis.Statement.Select.Select withOrderByElements(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.OrderByElement> orderByElements) {
 this.select.setOrderByElements(orderByElements);
 return this;
 }
@@ -165,4 +165,8 @@ builder.Append("(").Append(global::DripSharp.Runtime.JavaCompat.StringValueOf(th
 ((global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this)).appendTo(builder, this.alias, this.sampleClause, this.pivot, this.unPivot);
 return builder;
 }
+
+global::DripSharp.SqlTrellis.Statement.ParenthesedStatement global::DripSharp.SqlTrellis.Statement.ParenthesedStatement.withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) => (global::DripSharp.SqlTrellis.Statement.ParenthesedStatement)(this.withAlias(alias));
+
+global::DripSharp.SqlTrellis.Statement.Select.FromItem global::DripSharp.SqlTrellis.Statement.Select.FromItem.withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) => (global::DripSharp.SqlTrellis.Statement.Select.FromItem)(this.withAlias(alias));
 }

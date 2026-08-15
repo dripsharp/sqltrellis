@@ -12,4 +12,8 @@ public class IntoTableVisitorAdapter<T> : global::DripSharp.SqlTrellis.Statement
 public virtual T visit<S>(global::DripSharp.SqlTrellis.Schema.Table tableName, S context) {
 return default!;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Schema.Table tableName) {
+this.visit<object>(tableName, (object)default!);
+}
 }

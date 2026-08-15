@@ -11,9 +11,5 @@ namespace DripSharp.SqlTrellis.Util.Validation.Feature;
 public interface Version : global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetValidation {
 public string getVersionString();
 
-public new global::DripSharp.SqlTrellis.Util.Validation.ValidationException getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) {
-return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this)).toError(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.EnumName(feature), " not supported."));
-}
-
-global::DripSharp.SqlTrellis.Util.Validation.ValidationException global::DripSharp.SqlTrellis.Util.Validation.Feature.FeatureSetValidation.getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature) => (this.getMessage(feature));
+public new global::DripSharp.SqlTrellis.Util.Validation.ValidationException getMessage(global::DripSharp.SqlTrellis.Parser.Feature.Feature feature);
 }

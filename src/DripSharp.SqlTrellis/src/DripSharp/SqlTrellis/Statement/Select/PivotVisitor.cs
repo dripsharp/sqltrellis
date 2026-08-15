@@ -11,19 +11,13 @@ namespace DripSharp.SqlTrellis.Statement.Select;
 public interface PivotVisitor<T> {
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot) {
-this.visit<object>(pivot, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.Pivot pivot);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.PivotXml pivotXml, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.PivotXml pivotXml) {
-this.visit<object>(pivotXml, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.PivotXml pivotXml);
 
 public T visit<S>(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot, S context);
 
-public void visit(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot) {
-this.visit<object>(unpivot, (object)default!);
-}
+public void visit(global::DripSharp.SqlTrellis.Statement.Select.UnPivot unpivot);
 }

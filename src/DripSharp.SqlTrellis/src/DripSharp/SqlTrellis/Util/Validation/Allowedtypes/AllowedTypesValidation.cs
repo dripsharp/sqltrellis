@@ -36,4 +36,12 @@ errorConsumer(((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapabilit
 public virtual string getName() {
 return global::DripSharp.SqlTrellis.Util.Validation.Allowedtypes.AllowedTypesValidation.NAME;
 }
+
+public virtual global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public virtual global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
+}
 }

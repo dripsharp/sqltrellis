@@ -73,11 +73,11 @@ return default!;
 public virtual void validateOldOracleJoinBinaryExpression<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression expression, string @operator, S context) {
 foreach (global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability c in this.getCapabilities()) {
 this.validateOptionalExpression(expression.getLeftExpression(), this);
-if ((expression.getOldOracleJoinSyntax() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_JOIN)) {
+if ((expression.getOldOracleJoinSyntax() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_JOIN)) {
 this.validateFeature(c, global::DripSharp.SqlTrellis.Parser.Feature.Feature.oracleOldJoinSyntax);
 }
 this.validateOptionalExpression(expression.getRightExpression(), this);
-if ((expression.getOraclePriorPosition() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_PRIOR)) {
+if ((expression.getOraclePriorPosition() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_PRIOR)) {
 this.validateFeature(c, global::DripSharp.SqlTrellis.Parser.Feature.Feature.oraclePriorPosition);
 }
 }
@@ -96,7 +96,7 @@ return default!;
 public virtual object visit<S>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.InExpression inExpression, S context) {
 foreach (global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability c in this.getCapabilities()) {
 this.validateOptionalExpression(inExpression.getLeftExpression(), this);
-if ((inExpression.getOldOracleJoinSyntax() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax.NO_ORACLE_JOIN)) {
+if ((inExpression.getOldOracleJoinSyntax() != global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntaxStatics.NO_ORACLE_JOIN)) {
 this.validateFeature(c, global::DripSharp.SqlTrellis.Parser.Feature.Feature.oracleOldJoinSyntax);
 }
 }
@@ -1036,5 +1036,25 @@ return default!;
 
 public virtual object visit<S>(global::DripSharp.SqlTrellis.Statement.Piped.FromQuery fromQuery, S context) {
 return default!;
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.ConnectByPriorOperator connectByPriorOperator) {
+this.visit<object>(connectByPriorOperator, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.OracleHint hint) {
+this.visit<object>(hint, (object)default!);
+}
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.RowConstructor<TWildcard0_0> rowConstructor) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
+this.visit<object, TWildcard0_0>(rowConstructor, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Expression.RowGetExpression rowGetExpression) {
+this.visit<object>(rowGetExpression, (object)default!);
+}
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<TWildcard0_0> expressionList) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
+this.visit<object, TWildcard0_0>(expressionList, (object)default!);
 }
 }

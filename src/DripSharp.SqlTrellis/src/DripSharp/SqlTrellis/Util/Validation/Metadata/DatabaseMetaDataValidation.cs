@@ -9,42 +9,15 @@
 namespace DripSharp.SqlTrellis.Util.Validation.Metadata;
 
 public interface DatabaseMetaDataValidation : global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability {
-public const string NAME = "meta data";
-
-public new void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
-global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named = context.get<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named>(global::DripSharp.SqlTrellis.Util.Validation.Metadata.MetadataContext.named, typeof(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named));
-bool checkForExists = global::DripSharp.Runtime.JavaCompat.UnboxObject<bool>(context.get<bool>(global::DripSharp.SqlTrellis.Util.Validation.Metadata.MetadataContext.exists, typeof(bool)));
-try {
-bool exists = this.exists(named);
-if ((exists ^ checkForExists)) {
-errorConsumer(this.getErrorMessage(named, checkForExists));
-}
-} catch (global::DripSharp.SqlTrellis.Util.Validation.ValidationException ve) {
-errorConsumer(ve);
-} catch (global::System.NotSupportedException uoe) {
-errorConsumer(new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("This Operation ", named.ToString()), "  is not supported yet."), uoe));
-} catch (global::System.Exception e) when (e is not global::System.TypeInitializationException) {
-errorConsumer(this.getUnexpectedErrorMessage(named, e));
-}
-}
+public new void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer);
 
 public bool exists(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named);
 
-public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, bool checkForExists) {
-return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this)).toError(global::DripSharp.Runtime.JavaCompat.JavaStringFormat("%s does %sexist.", named.getFqn(), (checkForExists ? (object)("not ") : (object)(""))));
-}
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, bool checkForExists);
 
-public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getUnexpectedErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, global::System.Exception cause) {
-return new global::DripSharp.SqlTrellis.Util.Validation.UnexpectedValidationException(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(named.getFqn(), ": cannot validate "), named.getNamedObject()), "-name. detail: "), global::DripSharp.Runtime.JavaCompat.ExceptionMessage(cause)), cause);
-}
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getUnexpectedErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, global::System.Exception cause);
 
-public new string getName() {
-return global::DripSharp.SqlTrellis.Util.Validation.Metadata.DatabaseMetaDataValidation.NAME;
-}
-
-void global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability.validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) => this.validate(context, errorConsumer);
-
-string global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability.getName() => (this.getName());
+public new string getName();
 }
 
 public sealed class __DatabaseMetaDataValidationFunctionalAdapter : global::DripSharp.SqlTrellis.Util.Validation.Metadata.DatabaseMetaDataValidation {
@@ -57,4 +30,45 @@ this.implementation = implementation;
 public bool exists(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named) {
 return this.implementation(named);
 }
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, bool checkForExists) {
+return ((global::DripSharp.SqlTrellis.Util.Validation.ValidationCapability)(this)).toError(global::DripSharp.Runtime.JavaCompat.JavaStringFormat("%s does %sexist.", named.getFqn(), (checkForExists ? (object)("not ") : (object)(""))));
+}
+
+public string getName() {
+return ((object)(this)).GetType().Name;
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException getUnexpectedErrorMessage(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named, global::System.Exception cause) {
+return new global::DripSharp.SqlTrellis.Util.Validation.UnexpectedValidationException(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(named.getFqn(), ": cannot validate "), named.getNamedObject()), "-name. detail: "), global::DripSharp.Runtime.JavaCompat.ExceptionMessage(cause)), cause);
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message);
+}
+
+public global::DripSharp.SqlTrellis.Util.Validation.ValidationException toError(string message, global::System.Exception th) {
+return new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(message, th);
+}
+
+public void validate(global::DripSharp.SqlTrellis.Util.Validation.ValidationContext context, global::System.Action<global::DripSharp.SqlTrellis.Util.Validation.ValidationException> errorConsumer) {
+global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named named = context.get<global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named>(global::DripSharp.SqlTrellis.Util.Validation.Metadata.MetadataContext.named, typeof(global::DripSharp.SqlTrellis.Util.Validation.Metadata.Named));
+bool checkForExists = global::DripSharp.Runtime.JavaCompat.UnboxObject<bool>(context.get<bool>(global::DripSharp.SqlTrellis.Util.Validation.Metadata.MetadataContext.exists, typeof(bool)));
+try {
+bool exists = this.exists(named);
+if ((exists ^ checkForExists)) {
+errorConsumer(((global::DripSharp.SqlTrellis.Util.Validation.Metadata.DatabaseMetaDataValidation)(this)).getErrorMessage(named, checkForExists));
+}
+} catch (global::DripSharp.SqlTrellis.Util.Validation.ValidationException ve) {
+errorConsumer(ve);
+} catch (global::System.NotSupportedException uoe) {
+errorConsumer(new global::DripSharp.SqlTrellis.Util.Validation.ValidationException(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat("This Operation ", named.ToString()), "  is not supported yet."), uoe));
+} catch (global::System.Exception e) when (e is not global::System.TypeInitializationException) {
+errorConsumer(((global::DripSharp.SqlTrellis.Util.Validation.Metadata.DatabaseMetaDataValidation)(this)).getUnexpectedErrorMessage(named, e));
+}
+}
+}
+
+public static class DatabaseMetaDataValidationStatics {
+public const string NAME = "meta data";
 }

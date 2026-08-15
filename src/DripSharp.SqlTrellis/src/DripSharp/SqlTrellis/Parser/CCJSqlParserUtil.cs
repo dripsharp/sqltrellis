@@ -65,7 +65,7 @@ bool allowComplex = parser.getConfiguration().getAsBoolean(global::DripSharp.Sql
 try {
 (global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.LOGGER).Info(global::DripSharp.Runtime.JavaCompat.Concat("Trying SIMPLE parsing ", (allowComplex ? "first" : "only")));
 statement = global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parseStatement(parser.withAllowComplexParsing(false), executorService);
-} catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
+} catch (global::DripSharp.SqlTrellis.JSQLParserException) {
 (global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.LOGGER).Info(global::DripSharp.Runtime.JavaCompat.Concat("Nesting Depth", global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.getNestingDepth(sql)));
 if ((allowComplex && (global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.getNestingDepth(sql) <= global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.ALLOWED_NESTING_DEPTH))) {
 (global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.LOGGER).Info("Trying COMPLEX parsing when SIMPLE parsing failed");
@@ -75,8 +75,7 @@ consumer(parser);
 }
 statement = global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parseStatement(parser.withAllowComplexParsing(true), executorService);
 } else {
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }
 return statement!;
@@ -154,7 +153,7 @@ consumer(parser__209_26);
 }
 try {
 expression = parser__209_26.Expression();
-if ((parser__209_26.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.EOF)) {
+if ((parser__209_26.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.EOF)) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(global::DripSharp.Runtime.JavaCompat.Concat("could only parse partial expression ", global::DripSharp.Runtime.JavaCompat.StringValueOf(expression!)));
 }
 } catch (global::DripSharp.SqlTrellis.Parser.ParseException ex) {
@@ -168,12 +167,11 @@ consumer(parser__226_30);
 }
 try {
 expression = parser__226_30.Expression();
-if ((!allowPartialParse && (parser__226_30.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.EOF))) {
+if ((!allowPartialParse && (parser__226_30.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.EOF))) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(global::DripSharp.Runtime.JavaCompat.Concat("could only parse partial expression ", global::DripSharp.Runtime.JavaCompat.StringValueOf(expression!)));
 }
-} catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+} catch (global::DripSharp.SqlTrellis.JSQLParserException) {
+throw;
 } catch (global::DripSharp.SqlTrellis.Parser.ParseException ex) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(ex);
 }
@@ -208,7 +206,7 @@ consumer(parser__289_26);
 }
 try {
 expression = parser__289_26.Expression();
-if ((parser__289_26.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.EOF)) {
+if ((parser__289_26.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.EOF)) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(global::DripSharp.Runtime.JavaCompat.Concat("could only parse partial expression ", global::DripSharp.Runtime.JavaCompat.StringValueOf(expression!)));
 }
 } catch (global::DripSharp.SqlTrellis.Parser.ParseException ex) {
@@ -222,12 +220,11 @@ consumer(parser__305_30);
 }
 try {
 expression = parser__305_30.Expression();
-if ((!allowPartialParse && (parser__305_30.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.EOF))) {
+if ((!allowPartialParse && (parser__305_30.getNextToken().kind != global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.EOF))) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(global::DripSharp.Runtime.JavaCompat.Concat("could only parse partial expression ", global::DripSharp.Runtime.JavaCompat.StringValueOf(expression!)));
 }
-} catch (global::DripSharp.SqlTrellis.JSQLParserException ex) {
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(ex);
-throw new global::System.InvalidOperationException("unreachable");
+} catch (global::DripSharp.SqlTrellis.JSQLParserException) {
+throw;
 } catch (global::DripSharp.SqlTrellis.Parser.ParseException ex) {
 throw new global::DripSharp.SqlTrellis.JSQLParserException(ex);
 }
@@ -317,10 +314,10 @@ global::DripSharp.SqlTrellis.Parser.CCJSqlParser parser = global::DripSharp.SqlT
 while (true) {
 global::DripSharp.SqlTrellis.Statement.Statement stmt = parser.SingleStatement();
 listener.accept(stmt);
-if ((parser.getToken(1).kind == global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.ST_SEMICOLON)) {
+if ((parser.getToken(1).kind == global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.ST_SEMICOLON)) {
 parser.getNextToken();
 }
-if ((parser.getToken(1).kind == global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstants.EOF)) {
+if ((parser.getToken(1).kind == global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.EOF)) {
 break;
 }
 }

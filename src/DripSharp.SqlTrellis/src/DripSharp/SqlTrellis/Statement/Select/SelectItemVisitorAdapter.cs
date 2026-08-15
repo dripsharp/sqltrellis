@@ -12,4 +12,8 @@ public class SelectItemVisitorAdapter<T> : global::DripSharp.SqlTrellis.Statemen
 public virtual T visit<S, TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.SelectItem<TWildcard0_0> item, S context) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
 return default!;
 }
+
+public virtual void visit<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.Select.SelectItem<TWildcard0_0> selectItem) where TWildcard0_0 : global::DripSharp.SqlTrellis.Expression.Expression {
+this.visit<object, TWildcard0_0>(selectItem, (object)default!);
+}
 }

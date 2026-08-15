@@ -29,7 +29,7 @@ public virtual void testSelectASTNode() {
 string sql = "SELECT  a,  b FROM  mytable  order by   b,  c";
 global::DripSharp.SqlTrellis.Parser.SimpleNode node = (global::DripSharp.SqlTrellis.Parser.SimpleNode)(global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parseAST(sql)!);
 node.dump("*");
-global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.JJTSTATEMENT, node.getId(), null);
+global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.JJTSTATEMENT, node.getId(), null);
 }
 
 private global::DripSharp.SqlTrellis.Parser.Token subSelectStart = null!;
@@ -97,7 +97,7 @@ public virtual void testDetectInExpressions() {
 string sql = "SELECT * FROM  mytable WHERE a IN (1,2,3,4,5,6,7)";
 global::DripSharp.SqlTrellis.Parser.SimpleNode node = (global::DripSharp.SqlTrellis.Parser.SimpleNode)(global::DripSharp.SqlTrellis.Parser.CCJSqlParserUtil.parseAST(sql)!);
 node.dump("*");
-global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.JJTSTATEMENT, node.getId(), null);
+global::DripSharp.Testing.JavaAssertions.Equal(global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.JJTSTATEMENT, node.getId(), null);
 node.jjtAccept(new Anonymous_163_24(this), (object)default!);
 global::DripSharp.Testing.JavaAssertions.NotNull(this.subSelectStart, null);
 global::DripSharp.Testing.JavaAssertions.NotNull(this.subSelectEnd, null);
@@ -113,7 +113,7 @@ this.__outer = __outer;
 }
 
 public override object visit(global::DripSharp.SqlTrellis.Parser.SimpleNode node, object data) {
-if ((node.getId() == global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstants.JJTINEXPRESSION)) {
+if ((node.getId() == global::DripSharp.SqlTrellis.Parser.CCJSqlParserTreeConstantsStatics.JJTINEXPRESSION)) {
 this.__outer.subSelectStart = node.jjtGetFirstToken();
 this.__outer.subSelectEnd = node.jjtGetLastToken();
 return base.visit(node, data);

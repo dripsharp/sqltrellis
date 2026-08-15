@@ -357,4 +357,192 @@ return this.expressionDeParser;
 public virtual global::DripSharp.SqlTrellis.Util.Deparser.SelectDeParser getSelectDeParser() {
 return this.selectDeParser;
 }
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Block block) {
+this.visit<object>(block, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Commit commit) {
+this.visit<object>(commit, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement createFunctionalStatement) {
+this.visit<object>(createFunctionalStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.DeclareStatement declareStatement) {
+this.visit<object>(declareStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.DescribeStatement describe) {
+this.visit<object>(describe, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.ExplainStatement explainStatement) {
+this.visit<object>(explainStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.IfElseStatement ifElseStatement) {
+this.visit<object>(ifElseStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.PurgeStatement purgeStatement) {
+this.visit<object>(purgeStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.ResetStatement reset) {
+this.visit<object>(reset, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.RollbackStatement rollbackStatement) {
+this.visit<object>(rollbackStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.SavepointStatement savepointStatement) {
+this.visit<object>(savepointStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.SetStatement set) {
+this.visit<object>(set, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.ShowColumnsStatement showColumns) {
+this.visit<object>(showColumns, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.ShowStatement showStatement) {
+this.visit<object>(showStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Statements statements) {
+this.visit<object>(statements, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.UnsupportedStatement unsupportedStatement) {
+this.visit<object>(unsupportedStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.UseStatement use) {
+this.visit<object>(use, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Alter.Alter alter) {
+this.visit<object>(alter, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Alter.AlterSession alterSession) {
+this.visit<object>(alterSession, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Alter.AlterSystemStatement alterSystemStatement) {
+this.visit<object>(alterSystemStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Alter.RenameTableStatement renameTableStatement) {
+this.visit<object>(renameTableStatement, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Alter.Sequence.AlterSequence alterSequence) {
+this.visit<object>(alterSequence, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Analyze.Analyze analyze) {
+this.visit<object>(analyze, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Comment.Comment comment) {
+this.visit<object>(comment, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.Index.CreateIndex createIndex) {
+this.visit<object>(createIndex, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.Schema.CreateSchema createSchema) {
+this.visit<object>(createSchema, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.Sequence.CreateSequence createSequence) {
+this.visit<object>(createSequence, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.Synonym.CreateSynonym createSynonym) {
+this.visit<object>(createSynonym, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.Table.CreateTable createTable) {
+this.visit<object>(createTable, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.View.AlterView alterView) {
+this.visit<object>(alterView, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Create.View.CreateView createView) {
+this.visit<object>(createView, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Delete.Delete delete) {
+this.visit<object>(delete, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Delete.ParenthesedDelete parenthesedDelete) {
+this.visit<object>(parenthesedDelete, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Drop.Drop drop) {
+this.visit<object>(drop, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Execute.Execute execute) {
+this.visit<object>(execute, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Grant.Grant grant) {
+this.visit<object>(grant, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Insert.Insert insert) {
+this.visit<object>(insert, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Insert.ParenthesedInsert parenthesedInsert) {
+this.visit<object>(parenthesedInsert, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Merge.Merge merge) {
+this.visit<object>(merge, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Refresh.RefreshMaterializedViewStatement materializedView) {
+this.visit<object>(materializedView, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Select.Select select) {
+this.visit<object>(select, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Show.ShowIndexStatement showIndex) {
+this.visit<object>(showIndex, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Show.ShowTablesStatement showTables) {
+this.visit<object>(showTables, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Truncate.Truncate truncate) {
+this.visit<object>(truncate, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Update.ParenthesedUpdate parenthesedUpdate) {
+this.visit<object>(parenthesedUpdate, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Update.Update update) {
+this.visit<object>(update, (object)default!);
+}
+
+public virtual void visit(global::DripSharp.SqlTrellis.Statement.Upsert.Upsert upsert) {
+this.visit<object>(upsert, (object)default!);
+}
 }

@@ -8,7 +8,9 @@
 #nullable disable
 namespace DripSharp.SqlTrellis.Parser;
 
-public interface CCJSqlParserTreeConstants {
+public interface CCJSqlParserTreeConstants {}
+
+public static class CCJSqlParserTreeConstantsStatics {
 public const int JJTVOID = 0;
 
 public const int JJTSTATEMENT = 1;

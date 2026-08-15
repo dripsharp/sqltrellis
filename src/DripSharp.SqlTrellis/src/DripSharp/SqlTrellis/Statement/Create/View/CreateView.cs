@@ -218,4 +218,8 @@ return this.viewCommentOptions;
 public virtual void setViewCommentOptions(global::System.Collections.Generic.IList<string> viewCommentOptions) {
 this.viewCommentOptions = viewCommentOptions;
 }
+
+public virtual void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

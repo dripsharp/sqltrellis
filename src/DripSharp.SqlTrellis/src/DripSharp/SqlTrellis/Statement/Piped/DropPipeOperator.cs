@@ -109,7 +109,7 @@ global::DripSharp.Runtime.JavaCompat.SortList(this.columns, c);
 }
 
 public virtual void ensureCapacity(int minCapacity) {
-this.columns.EnsureCapacity(minCapacity);
+global::DripSharp.Runtime.JavaCompat.EnsureCapacity(this.columns, minCapacity);
 }
 
 public virtual bool remove(global::DripSharp.SqlTrellis.Schema.Column o) {

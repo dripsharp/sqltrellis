@@ -182,4 +182,8 @@ public virtual void setUseEqual(bool useEqual) {
 this.useEqual = useEqual;
 }
 }
+
+public void accept<TWildcard0_0>(global::DripSharp.SqlTrellis.Statement.StatementVisitor<TWildcard0_0> statementVisitor) {
+this.accept<TWildcard0_0, object>(statementVisitor, (object)default!);
+}
 }

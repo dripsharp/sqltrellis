@@ -13,7 +13,7 @@ private global::DripSharp.SqlTrellis.Schema.Table table = null!;
 
 private global::System.Collections.Generic.IList<string> referencedColumnNames = null!;
 
-private global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Statement.ReferentialAction> referentialActions = new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Statement.ReferentialAction>(2);
+private global::System.Collections.Generic.ISet<global::DripSharp.SqlTrellis.Statement.ReferentialAction> referentialActions = new global::System.Collections.Generic.HashSet<global::DripSharp.SqlTrellis.Statement.ReferentialAction>();
 
 public virtual global::DripSharp.SqlTrellis.Schema.Table getTable() {
 return this.table;
@@ -127,43 +127,43 @@ global::DripSharp.Runtime.JavaCompat.AddAll(collection, referencedColumnNames);
 return this.withReferencedColumnNames(collection);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withType(string type) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withType(type)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withType(string type) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withType(type)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withUsing(string @using) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withUsing(@using)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withUsing(string @using) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withUsing(@using)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withName(global::System.Collections.Generic.IList<string> name) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withName(name)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(global::System.Collections.Generic.IList<string> name) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withName(name)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withName(string name) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withName(name)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(string name) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withName(name)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withColumnsNames(global::System.Collections.Generic.IList<string> list) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withColumnsNames(list)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumnsNames(global::System.Collections.Generic.IList<string> list) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withColumnsNames(list)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withColumns(columns)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withColumns(columns)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.addColumns(functionDeclarationParts)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.addColumns(functionDeclarationParts)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.addColumns(functionDeclarationParts)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.addColumns(functionDeclarationParts)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withIndexSpec(idxSpec)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withIndexSpec(idxSpec)))!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex withIndexKeyword(string indexKeyword) {
-return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(base.withIndexKeyword(indexKeyword)!);
+public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexKeyword(string indexKeyword) {
+return (global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withIndexKeyword(indexKeyword)))!);
 }
 }

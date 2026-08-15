@@ -37,4 +37,8 @@ public virtual global::DripSharp.SqlTrellis.Expression.TimeKeyExpression withStr
 this.setStringValue(stringValue);
 return this;
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

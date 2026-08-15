@@ -57,4 +57,8 @@ return this;
 public virtual E getLeftExpression<E>(global::System.Type type) where E : global::DripSharp.SqlTrellis.Expression.Expression {
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getLeftExpression());
 }
+
+public virtual void accept<T>(global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T> expressionVisitor) {
+this.accept<T, object>((global::DripSharp.SqlTrellis.Expression.ExpressionVisitor<T>)(expressionVisitor), (object)default!);
+}
 }

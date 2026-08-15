@@ -162,14 +162,13 @@ this.maxNextCharInd += i;
 }
 }
 return;
-} catch (global::System.IO.IOException e) {
+} catch (global::System.IO.IOException) {
 --(this.bufpos);
 this.backup(0);
 if ((this.tokenBegin == -1)) {
 this.tokenBegin = this.bufpos;
 }
-global::System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(e);
-throw new global::System.InvalidOperationException("unreachable");
+throw;
 }
 }
 

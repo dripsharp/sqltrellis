@@ -9,18 +9,6 @@
 namespace DripSharp.SqlTrellis.Expression.Operators.Relational;
 
 public interface SupportsOldOracleJoinSyntax {
-public const int NO_ORACLE_JOIN = 0;
-
-public const int ORACLE_JOIN_RIGHT = 1;
-
-public const int ORACLE_JOIN_LEFT = 2;
-
-public const int NO_ORACLE_PRIOR = 0;
-
-public const int ORACLE_PRIOR_START = 1;
-
-public const int ORACLE_PRIOR_END = 2;
-
 public int getOldOracleJoinSyntax();
 
 public void setOldOracleJoinSyntax(int oldOracleJoinSyntax);
@@ -32,4 +20,18 @@ public int getOraclePriorPosition();
 public void setOraclePriorPosition(int priorPosition);
 
 public global::DripSharp.SqlTrellis.Expression.Operators.Relational.SupportsOldOracleJoinSyntax withOraclePriorPosition(int priorPosition);
+}
+
+public static class SupportsOldOracleJoinSyntaxStatics {
+public const int NO_ORACLE_JOIN = 0;
+
+public const int ORACLE_JOIN_RIGHT = 1;
+
+public const int ORACLE_JOIN_LEFT = 2;
+
+public const int NO_ORACLE_PRIOR = 0;
+
+public const int ORACLE_PRIOR_START = 1;
+
+public const int ORACLE_PRIOR_END = 2;
 }

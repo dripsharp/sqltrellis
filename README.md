@@ -6,11 +6,18 @@ This is a generated publication repository. Durable source, translation, runtime
 
 ## Projects
 
-- [`DripSharp.SqlTrellis`](src/DripSharp.SqlTrellis/DripSharp.SqlTrellis.csproj) — SqlTrellis — JSqlParser for .NET (`net10.0`, version `5.3.0-alpha.1`)
+- [`DripSharp.SqlTrellis`](src/DripSharp.SqlTrellis/DripSharp.SqlTrellis.csproj) — SqlTrellis — JSqlParser for .NET (`netstandard2.0`, version `5.3.0-alpha.1`)
+
+## Framework compatibility
+
+Every production library has one target framework: `netstandard2.0`. Repository test projects, runners, probes, differential hosts, and package consumers execute on `net10.0` while referencing or consuming those production assemblies.
+
+.NET Framework 4.8 compatibility is inferred from the `netstandard2.0` contract and compatible dependency assets. This repository does not build or run a .NET Framework 4.8 host and does not empirically certify net48 runtime behavior.
+
 
 ## Install
 
-The first public packages are prereleases. Install the package you need from nuget.org:
+The first public release is a prerelease. Install from nuget.org:
 
 ```sh
 dotnet add package DripSharp.SqlTrellis --version 5.3.0-alpha.1
