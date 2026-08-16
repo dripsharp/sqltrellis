@@ -6,51 +6,51 @@ namespace DripSharp.SqlTrellis.Expression.Operators.Arithmetic;
 
 public class ArithmethicTests {
 public virtual void testAddition() {
-global::DripSharp.Testing.JavaAssertions.Equal("1 + a", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(1))))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("1 + a", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Addition().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(1))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).ToString(), null);
 }
 
 public virtual void testBitwiseAnd() {
-global::DripSharp.Testing.JavaAssertions.Equal("a & b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a & b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseAnd().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testBitwiseLeftShift() {
-global::DripSharp.Testing.JavaAssertions.Equal("a << b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a << b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseLeftShift().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testBitwiseOr() {
-global::DripSharp.Testing.JavaAssertions.Equal("a | b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a | b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseOr().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testBitwiseRightShift() {
-global::DripSharp.Testing.JavaAssertions.Equal("a >> b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a >> b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseRightShift().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testBitwiseXor() {
-global::DripSharp.Testing.JavaAssertions.Equal("a ^ b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a ^ b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.BitwiseXor().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testConcat() {
-global::DripSharp.Testing.JavaAssertions.Equal("a || b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a || b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Concat().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testDivision() {
-global::DripSharp.Testing.JavaAssertions.Equal("a / b", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")))).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("a / b", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Division().withLeftExpression(new global::DripSharp.SqlTrellis.Schema.Column("a")).withRightExpression(new global::DripSharp.SqlTrellis.Schema.Column("b")).ToString(), null);
 }
 
 public virtual void testIntegerDivision() {
-global::DripSharp.Testing.JavaAssertions.Equal("4 DIV 2", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(4))))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("4 DIV 2", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.IntegerDivision().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(4))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))).ToString(), null);
 }
 
 public virtual void testModulo() {
-global::DripSharp.Testing.JavaAssertions.Equal("3 % 2", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(3))))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("3 % 2", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Modulo().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(3))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))).ToString(), null);
 }
 
 public virtual void testMultiplication() {
-global::DripSharp.Testing.JavaAssertions.Equal("5 * 2", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(5))))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("5 * 2", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Multiplication().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(5))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(2))).ToString(), null);
 }
 
 public virtual void testSubtraction() {
-global::DripSharp.Testing.JavaAssertions.Equal("5 - 3", ((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction)(((global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction)(new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(5))))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(3))))).ToString(), null);
+global::DripSharp.Testing.JavaAssertions.Equal("5 - 3", new global::DripSharp.SqlTrellis.Expression.Operators.Arithmetic.Subtraction().withLeftExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(5))).withRightExpression(new global::DripSharp.SqlTrellis.Expression.LongValue((long)(3))).ToString(), null);
 }
 
 [Xunit.Fact]

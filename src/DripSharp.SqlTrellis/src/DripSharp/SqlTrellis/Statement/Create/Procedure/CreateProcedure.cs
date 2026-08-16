@@ -21,15 +21,15 @@ public CreateProcedure(bool orReplace, global::System.Collections.Generic.IList<
 
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement withFunctionDeclarationParts(global::System.Collections.Generic.IList<string> functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure withFunctionDeclarationParts(global::System.Collections.Generic.IList<string> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure)(base.withFunctionDeclarationParts(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement addFunctionDeclarationParts(params string[] functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure addFunctionDeclarationParts(params string[] functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure)(base.addFunctionDeclarationParts(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement addFunctionDeclarationParts(global::System.Collections.Generic.ICollection<string> functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure addFunctionDeclarationParts(global::System.Collections.Generic.ICollection<string> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure)(base.addFunctionDeclarationParts(functionDeclarationParts)!);
 }
 }

@@ -46,11 +46,11 @@ this.setOraclePriorPosition(oraclePriorPosition);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withRightExpression(arg0)!);
 }
 

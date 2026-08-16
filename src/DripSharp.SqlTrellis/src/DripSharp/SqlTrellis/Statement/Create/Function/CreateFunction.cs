@@ -21,15 +21,15 @@ public CreateFunction(bool orReplace, global::System.Collections.Generic.IList<s
 
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement withFunctionDeclarationParts(global::System.Collections.Generic.IList<string> functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction withFunctionDeclarationParts(global::System.Collections.Generic.IList<string> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(base.withFunctionDeclarationParts(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement addFunctionDeclarationParts(params string[] functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction addFunctionDeclarationParts(params string[] functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(base.addFunctionDeclarationParts(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.CreateFunctionalStatement addFunctionDeclarationParts(global::System.Collections.Generic.ICollection<string> functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction addFunctionDeclarationParts(global::System.Collections.Generic.ICollection<string> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(base.addFunctionDeclarationParts(functionDeclarationParts)!);
 }
 }

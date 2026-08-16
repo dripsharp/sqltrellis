@@ -25,19 +25,19 @@ public override T accept<T, S>(global::DripSharp.SqlTrellis.Expression.Expressio
 return expressionVisitor.visit(this, context);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withLeftExpression(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withRightExpression(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(base.withRightExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOldOracleJoinSyntax(int arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOldOracleJoinSyntax(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals withOldOracleJoinSyntax(int arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(base.withOldOracleJoinSyntax(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOraclePriorPosition(int arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOraclePriorPosition(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals withOraclePriorPosition(int arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.MinorThanEquals)(base.withOraclePriorPosition(arg0)!);
 }
 }

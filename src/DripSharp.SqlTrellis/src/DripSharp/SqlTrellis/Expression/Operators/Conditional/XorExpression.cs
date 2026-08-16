@@ -16,11 +16,11 @@ this.setLeftExpression(leftExpression);
 this.setRightExpression(rightExpression);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression)(base.withLeftExpression(expression)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression expression) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Conditional.XorExpression)(base.withRightExpression(expression)!);
 }
 

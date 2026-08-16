@@ -16,43 +16,43 @@ string tail = global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runt
 return global::DripSharp.Runtime.JavaCompat.Concat(head, tail);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(global::System.Collections.Generic.IList<string> name) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withName(global::System.Collections.Generic.IList<string> name) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withName(name)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withName(string name) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withName(string name) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withName(name)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withType(string type) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withType(string type) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withType(type)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withUsing(string @using) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withUsing(string @using) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withUsing(@using)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumnsNames(global::System.Collections.Generic.IList<string> list) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withColumnsNames(global::System.Collections.Generic.IList<string> list) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withColumnsNames(list)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withColumns(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> columns) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withColumns(columns)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint addColumns(params global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams[] functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.addColumns(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint addColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Create.Table.Index.ColumnParams> functionDeclarationParts) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.addColumns(functionDeclarationParts)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withIndexSpec(global::System.Collections.Generic.IList<string> idxSpec) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withIndexSpec(idxSpec)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Create.Table.Index withIndexKeyword(string indexKeyword) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint withIndexKeyword(string indexKeyword) {
 return (global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(base.withIndexKeyword(indexKeyword)!);
 }
 

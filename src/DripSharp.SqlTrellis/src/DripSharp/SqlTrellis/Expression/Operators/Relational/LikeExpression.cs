@@ -95,11 +95,11 @@ this.setNot(not);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.LikeExpression)(base.withRightExpression(arg0)!);
 }
 

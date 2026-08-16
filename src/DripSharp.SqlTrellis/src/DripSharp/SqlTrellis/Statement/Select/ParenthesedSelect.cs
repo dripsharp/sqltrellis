@@ -83,7 +83,7 @@ public override void setAlias(global::DripSharp.SqlTrellis.Expression.Alias alia
 this.alias = alias;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Select withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
 this.setAlias(alias);
 return this;
 }
@@ -143,7 +143,7 @@ this.setSelect(selectBody);
 return this;
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Select withOrderByElements(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.OrderByElement> orderByElements) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.ParenthesedSelect withOrderByElements(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.OrderByElement> orderByElements) {
 this.select.setOrderByElements(orderByElements);
 return this;
 }

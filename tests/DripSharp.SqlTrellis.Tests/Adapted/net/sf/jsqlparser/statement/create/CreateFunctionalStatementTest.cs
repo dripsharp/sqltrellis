@@ -8,7 +8,7 @@ public class CreateFunctionalStatementTest {
 public virtual void createFunctionMinimal() {
 string statement = "CREATE FUNCTION foo RETURN 5; END;";
 global::DripSharp.SqlTrellis.Test.TestUtils.assertSqlCanBeParsedAndDeparsed(statement);
-global::DripSharp.SqlTrellis.Test.TestUtils.assertDeparse(((global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(((global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(new global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction().addFunctionDeclarationParts("foo"))).addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("RETURN 5;", "END;")))), statement);
+global::DripSharp.SqlTrellis.Test.TestUtils.assertDeparse(new global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction().addFunctionDeclarationParts("foo").addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("RETURN 5;", "END;")), statement);
 }
 
 public virtual void createFunctionLong() {
@@ -20,7 +20,7 @@ global::DripSharp.Testing.JavaAssertJ.That(stm.formatDeclaration()).Contains("fu
 public virtual void createProcedureMinimal() {
 string statement = "CREATE PROCEDURE foo AS BEGIN END;";
 global::DripSharp.SqlTrellis.Test.TestUtils.assertSqlCanBeParsedAndDeparsed(statement);
-global::DripSharp.SqlTrellis.Test.TestUtils.assertDeparse(((global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure)(((global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure)(new global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure().addFunctionDeclarationParts("foo", "AS"))).addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("BEGIN", "END;")))), statement);
+global::DripSharp.SqlTrellis.Test.TestUtils.assertDeparse(new global::DripSharp.SqlTrellis.Statement.Create.Procedure.CreateProcedure().addFunctionDeclarationParts("foo", "AS").addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("BEGIN", "END;")), statement);
 }
 
 public virtual void createProcedureLong() {
@@ -32,7 +32,7 @@ global::DripSharp.Testing.JavaAssertJ.That(stm.formatDeclaration()).Contains("re
 public virtual void createOrReplaceFunctionMinimal() {
 string statement = "CREATE OR REPLACE FUNCTION foo RETURN 5; END;";
 global::DripSharp.SqlTrellis.Test.TestUtils.assertSqlCanBeParsedAndDeparsed(statement);
-global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction func = ((global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(((global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction)(new global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction().addFunctionDeclarationParts("foo"))).addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("RETURN 5;", "END;"))));
+global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction func = new global::DripSharp.SqlTrellis.Statement.Create.Function.CreateFunction().addFunctionDeclarationParts("foo").addFunctionDeclarationParts(global::DripSharp.Runtime.JavaCompat.AsList<string>("RETURN 5;", "END;"));
 func.setOrReplace(true);
 global::DripSharp.SqlTrellis.Test.TestUtils.assertDeparse(func, statement);
 }

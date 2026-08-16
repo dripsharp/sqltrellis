@@ -39,11 +39,11 @@ break;
 return default!;
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.RegExpMatchOperator)(base.withRightExpression(arg0)!);
 }
 }

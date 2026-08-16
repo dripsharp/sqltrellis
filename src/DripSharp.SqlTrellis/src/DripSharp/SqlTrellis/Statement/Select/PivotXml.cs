@@ -53,55 +53,55 @@ public virtual E getInSelect<E>(global::System.Type type) where E : global::Drip
 return global::DripSharp.Runtime.JavaCompat.ClassCast<E>(type, this.getInSelect());
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml withAlias(global::DripSharp.SqlTrellis.Expression.Alias alias) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.withAlias(alias)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot withFunctionItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>> functionItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml withFunctionItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>> functionItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.withFunctionItems(functionItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot withForColumns(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Schema.Column> forColumns) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml withForColumns(global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Schema.Column> forColumns) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.withForColumns(forColumns)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot withSingleInItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>> singleInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml withSingleInItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>> singleInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.withSingleInItems(singleInItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot withMultiInItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>> multiInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml withMultiInItems(global::System.Collections.Generic.IList<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>> multiInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.withMultiInItems(multiInItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addFunctionItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>> functionItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addFunctionItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>> functionItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addFunctionItems(functionItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addFunctionItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>[] functionItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addFunctionItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Function>[] functionItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addFunctionItems(functionItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addForColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Schema.Column> forColumns) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addForColumns(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Schema.Column> forColumns) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addForColumns(forColumns)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addForColumns(params global::DripSharp.SqlTrellis.Schema.Column[] forColumns) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addForColumns(params global::DripSharp.SqlTrellis.Schema.Column[] forColumns) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addForColumns(forColumns)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addSingleInItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>> singleInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addSingleInItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>> singleInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addSingleInItems(singleInItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addSingleInItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>[] singleInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addSingleInItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Expression>[] singleInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addSingleInItems(singleInItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addMultiInItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>[] multiInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addMultiInItems(params global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>[] multiInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addMultiInItems(multiInItems)!);
 }
 
-public override global::DripSharp.SqlTrellis.Statement.Select.Pivot addMultiInItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>> multiInItems) {
+public new virtual global::DripSharp.SqlTrellis.Statement.Select.PivotXml addMultiInItems(global::System.Collections.Generic.ICollection<global::DripSharp.SqlTrellis.Statement.Select.SelectItem<global::DripSharp.SqlTrellis.Expression.Operators.Relational.ExpressionList<global::DripSharp.SqlTrellis.Expression.Expression>>> multiInItems) {
 return (global::DripSharp.SqlTrellis.Statement.Select.PivotXml)(base.addMultiInItems(multiInItems)!);
 }
 }

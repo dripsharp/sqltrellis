@@ -24,19 +24,19 @@ public override string getStringExpression() {
 return this.@operator;
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withLeftExpression(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator withLeftExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withLeftExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.BinaryExpression withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
-return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(((global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression)(base.withRightExpression(arg0)))!);
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator withRightExpression(global::DripSharp.SqlTrellis.Expression.Expression arg0) {
+return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withRightExpression(arg0)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOldOracleJoinSyntax(int oldOracleJoinSyntax) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator withOldOracleJoinSyntax(int oldOracleJoinSyntax) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOldOracleJoinSyntax(oldOracleJoinSyntax)!);
 }
 
-public override global::DripSharp.SqlTrellis.Expression.Operators.Relational.OldOracleJoinBinaryExpression withOraclePriorPosition(int oraclePriorPosition) {
+public new virtual global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator withOraclePriorPosition(int oraclePriorPosition) {
 return (global::DripSharp.SqlTrellis.Expression.Operators.Relational.ComparisonOperator)(base.withOraclePriorPosition(oraclePriorPosition)!);
 }
 }

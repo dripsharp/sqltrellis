@@ -12084,7 +12084,7 @@ this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsS
 this.jj_consume_token(475);
 select = this.Select();
 this.jj_consume_token(476);
-((global::DripSharp.SqlTrellis.Statement.Select.LateralSubSelect)(lateralSubSelect.withSelect(select))).setPrefix("LATERAL");
+lateralSubSelect.withSelect(select).setPrefix("LATERAL");
 this.jjtree.closeNodeScope(jjtn000, true);
 jjtc000 = false;
 jjtn000.jjtSetLastToken(this.getToken(0));
@@ -27461,7 +27461,7 @@ break;
 tk = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_FOREIGN);
 tk2 = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_KEY);
 colNames = this.ColumnNamesWithParamsList();
-((global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(fkIndex!.withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk!.image, " "), tk2!.image)))).withColumns(colNames!);
+fkIndex!.withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk!.image, " "), tk2!.image)).withColumns(colNames!);
 this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_REFERENCES);
 fkTable = this.Table();
 colNames2 = this.ColumnsNamesList();
@@ -27541,7 +27541,7 @@ exp__26033_44 = this.Expression();
 this.jj_consume_token(476);
 }
 __java_break_6:;
-checkCs = ((global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint)(new global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint().withName(sk3!))).withExpression(exp__26033_44!);
+checkCs = new global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint().withName(sk3!).withExpression(exp__26033_44!);
 global::DripSharp.Runtime.JavaCompat.Add(indexes, checkCs!);
 } else {
 if (this.jj_2_417(2)) {
@@ -32929,7 +32929,7 @@ case var __case_31224_24_0 when __case_31224_24_0 == global::DripSharp.SqlTrelli
 tk = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_FOREIGN);
 tk2 = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_KEY);
 columnNames = this.ColumnsNamesList();
-fkIndex = ((global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(((global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex)(new global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex().withName(sk3!))).withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, " "), tk2!.image)))).withColumnsNames(columnNames!)));
+fkIndex = new global::DripSharp.SqlTrellis.Statement.Create.Table.ForeignKeyIndex().withName(sk3!).withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, " "), tk2!.image)).withColumnsNames(columnNames!);
 columnNames = default!;
 this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_REFERENCES);
 fkTable = this.Table();
@@ -32989,7 +32989,7 @@ case var __case_31288_24_0 when __case_31288_24_0 == global::DripSharp.SqlTrelli
 tk = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_PRIMARY);
 tk2 = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_KEY);
 columnNames = this.ColumnsNamesList();
-index = ((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!))).withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, " "), tk2!.image)))).withColumnsNames(columnNames!)));
+index = new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!).withType(global::DripSharp.Runtime.JavaCompat.Concat(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, " "), tk2!.image)).withColumnsNames(columnNames!);
 alterExp.setIndex(index!);
 constraints = this.AlterExpressionConstraintState();
 alterExp.setConstraints(constraints!);
@@ -33045,7 +33045,7 @@ exp__31340_12 = this.Expression();
 this.jj_consume_token(476);
 }
 __java_break_2:;
-global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint checkCs = ((global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint)(new global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint().withName(sk3!))).withExpression(exp__31340_12!);
+global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint checkCs = new global::DripSharp.SqlTrellis.Statement.Create.Table.CheckConstraint().withName(sk3!).withExpression(exp__31340_12!);
 alterExp.setIndex(checkCs);
 break;
 }
@@ -33080,7 +33080,7 @@ this.jj_la1[555] = this.jj_gen;
 break;
 }
 columnNames = this.ColumnsNamesList();
-index = ((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!))).withType(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, ((tk2! != default!) ? global::DripSharp.Runtime.JavaCompat.Concat(" ", tk2!.image) : ""))))).withColumnsNames(columnNames!)));
+index = new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!).withType(global::DripSharp.Runtime.JavaCompat.Concat(tk.image, ((tk2! != default!) ? global::DripSharp.Runtime.JavaCompat.Concat(" ", tk2!.image) : ""))).withColumnsNames(columnNames!);
 alterExp.setIndex(index!);
 constraints = this.AlterExpressionConstraintState();
 alterExp.setConstraints(constraints!);
@@ -33106,7 +33106,7 @@ case var __case_31409_28_0 when __case_31409_28_0 == global::DripSharp.SqlTrelli
 {
 tk = this.jj_consume_token(global::DripSharp.SqlTrellis.Parser.CCJSqlParserConstantsStatics.K_KEY);
 columnNames = this.ColumnsNamesList();
-index = ((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(((global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint)(new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!))).withType(tk.image))).withColumnsNames(columnNames!)));
+index = new global::DripSharp.SqlTrellis.Statement.Create.Table.NamedConstraint().withName(sk3!).withType(tk.image).withColumnsNames(columnNames!);
 alterExp.setIndex(index!);
 constraints = this.AlterExpressionConstraintState();
 alterExp.setConstraints(constraints!);
